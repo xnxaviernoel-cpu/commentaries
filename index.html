@@ -266,6 +266,13 @@
   }
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto;}}
+  .affil{margin-top:56px;padding-top:38px;border-top:1px solid var(--line);}
+  .affil .eyebrow{color:var(--muted);}
+  .affil-logos{display:flex;align-items:center;gap:44px;flex-wrap:wrap;margin-top:20px;}
+  .affil-logos a{display:inline-flex;align-items:center;text-decoration:none;}
+  .affil-logos img{height:46px;width:auto;opacity:.9;mix-blend-mode:multiply;transition:opacity .25s var(--ease);}
+  .affil-logos a:hover img{opacity:1;}
+  .affil-fallback{display:none;align-items:center;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:15px;color:var(--ink);letter-spacing:-.01em;border:1px solid var(--line);border-radius:8px;padding:12px 16px;background:var(--surface);}
 </style>
 </head>
 <body>
@@ -351,6 +358,20 @@
           <div class="news-row"><div class="nd" data-i18n="news.n4d"></div><div class="nt" data-i18n="news.n4t"></div></div>
         </div>
       </div>
+
+      <div class="affil">
+        <p class="eyebrow" data-i18n="affil.eyebrow"></p>
+        <div class="affil-logos">
+          <a href="https://www.ulb.be" target="_blank" rel="noopener" aria-label="Université libre de Bruxelles">
+            <img src="ulb-logo.jpg" data-base="ulb-logo" alt="Université libre de Bruxelles" onerror="logoFallback(this)">
+            <span class="affil-fallback">Université libre de Bruxelles</span>
+          </a>
+          <a href="https://www.frs-fnrs.be" target="_blank" rel="noopener" aria-label="F.R.S.-FNRS">
+            <img src="fnrs-logo.jpg" data-base="fnrs-logo" alt="F.R.S.-FNRS" onerror="logoFallback(this)">
+            <span class="affil-fallback">F.R.S.-FNRS</span>
+          </a>
+        </div>
+      </div>
     </section>
   </div>
 
@@ -369,13 +390,13 @@
 
       <p class="eyebrow" style="margin-top:50px" data-i18n="fig.eyebrow"></p>
       <figure class="figure">
-        <svg viewBox="0 0 680 440" role="img" aria-label="Two-by-two architecture of four biased parameters: content versus salience bias crossed with detection versus selection phase">
+        <svg viewBox="45 0 635 440" role="img" aria-label="Two-by-two architecture of four biased parameters: content versus salience bias crossed with detection versus selection phase">
           <!-- column axis label (bias type) -->
           <text x="255" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" data-i18n-text="fig.axContent">CONTENT BIAS</text>
           <text x="505" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" data-i18n-text="fig.axSalience">SALIENCE BIAS</text>
           <!-- row axis label (phase), rotated -->
-          <text x="26" y="150" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" transform="rotate(-90 26 150)" data-i18n-text="fig.axDetection">DETECTION</text>
-          <text x="26" y="330" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" transform="rotate(-90 26 330)" data-i18n-text="fig.axSelection">SELECTION</text>
+          <text x="100" y="150" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" transform="rotate(-90 100 150)" data-i18n-text="fig.axDetection">DETECTION</text>
+          <text x="100" y="330" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" transform="rotate(-90 100 330)" data-i18n-text="fig.axSelection">SELECTION</text>
 
           <!-- B1 : content x detection (top-left) -->
           <g>
@@ -788,6 +809,7 @@ const I18N = {
   en:{
     "nav.home":"Home","nav.research":"Research","nav.publications":"Publications","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.about":"About","nav.contact":"Contact",
     "pubv.eyebrow":"Publications","pubv.h2":"Selected and complete list","pubv.intro":"A short selection of representative work, followed by the complete list pulled live from my ORCID record.",
+    "affil.eyebrow":"Affiliations",
     "hero.eyebrow":"Addiction neuroscience · Computational psychiatry",
     "hero.thesis":"Compulsion is not a loss of control. It is <em>goal-directed</em> motivation running under biased parameters.",
     "hero.lede":"I study why people keep pursuing harmful rewards — in gambling and in alcohol use disorder — by combining computational models of decision-making, field data, and the neuroscience of the brain and body.",
@@ -965,6 +987,7 @@ const I18N = {
   fr:{
     "nav.home":"Accueil","nav.research":"Recherche","nav.publications":"Publications","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.about":"À propos","nav.contact":"Contact",
     "pubv.eyebrow":"Publications","pubv.h2":"Sélection et liste complète","pubv.intro":"Une brève sélection de travaux représentatifs, suivie de la liste complète tirée en direct de mon profil ORCID.",
+    "affil.eyebrow":"Affiliations",
     "hero.eyebrow":"Neurosciences de l'addiction · Psychiatrie computationnelle",
     "hero.thesis":"La compulsion n'est pas une perte de contrôle. C'est une motivation <em>orientée vers un but</em>, opérant sous des paramètres biaisés.",
     "hero.lede":"J'étudie pourquoi certaines personnes continuent de poursuivre des récompenses délétères — dans le jeu d'argent et le trouble de l'usage d'alcool — en combinant modèles computationnels de la décision, données de terrain et neurosciences du corps et du cerveau.",
@@ -1160,6 +1183,12 @@ function applyLang(l){
 
 const views = document.querySelectorAll('.view');
 const linkButtons = document.querySelectorAll('.nav-links button');
+function logoFallback(img){
+  var exts=["png","svg","jpeg","webp"];
+  var i=+(img.dataset.i||0);
+  if(i<exts.length){img.dataset.i=i+1;img.src=img.dataset.base+"."+exts[i];}
+  else{img.style.display="none";if(img.nextElementSibling)img.nextElementSibling.style.display="inline-flex";}
+}
 function show(id){
   views.forEach(v=>v.classList.toggle('active', v.id===id));
   linkButtons.forEach(b=>b.setAttribute('aria-current', b.dataset.view===id ? 'true':'false'));
