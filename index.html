@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAF9F6;--paper-2:#F3F1EB;--ink:#191A1C;--muted:#6E7176;
+    --paper:#F2EEE5;--paper-2:#E9E4D8;--ink:#191A1C;--muted:#6E7176;
     --line:#E4E2DC;--accent:#345B4A;--accent-soft:rgba(52,91,74,.10);
     --maxw:1080px;--ease:cubic-bezier(.22,.61,.36,1);
   }
@@ -48,7 +48,7 @@
   ::selection{background:var(--accent-soft);}
 
   /* NAV */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(250,249,246,.78);border-bottom:1px solid var(--line);}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(242,238,229,.82);border-bottom:1px solid var(--line);}
   .nav{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
   .brand{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:17px;letter-spacing:-.01em;cursor:pointer;background:none;border:0;color:inherit;padding:0;display:flex;align-items:baseline;gap:10px;}
   .brand .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;transform:translateY(-1px);}
@@ -275,6 +275,7 @@
       <div class="nav-links">
         <button data-view="home" data-i18n="nav.home" aria-current="true"></button>
         <button data-view="research" data-i18n="nav.research"></button>
+        <button data-view="publications" data-i18n="nav.publications"></button>
         <button data-view="questions" data-i18n="nav.questions"></button>
         <button data-view="notes" data-i18n="nav.notes"></button>
         <button data-view="teaching" data-i18n="nav.mentoring"></button>
@@ -465,6 +466,18 @@
           <div class="arc-item now"><div class="ay" data-i18n="arc.a5y"></div><h3 data-i18n="arc.a5h"></h3><p data-i18n="arc.a5p"></p></div>
         </div>
         <p class="note" data-i18n="arc.note"></p>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="view" id="publications">
+    <section class="pad-bottom">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="pubv.eyebrow"></p>
+        <h2 data-i18n="pubv.h2"></h2>
+        <p class="intro" data-i18n="pubv.intro"></p>
       </div>
 
       <div style="margin-top:54px">
@@ -772,7 +785,8 @@
 <script>
 const I18N = {
   en:{
-    "nav.home":"Home","nav.research":"Research","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.about":"About","nav.contact":"Contact",
+    "nav.home":"Home","nav.research":"Research","nav.publications":"Publications","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.about":"About","nav.contact":"Contact",
+    "pubv.eyebrow":"Publications","pubv.h2":"Selected and complete list","pubv.intro":"A short selection of representative work, followed by the complete list pulled live from my ORCID record.",
     "hero.eyebrow":"Addiction neuroscience · Computational psychiatry",
     "hero.thesis":"Compulsion is not a loss of control. It is <em>goal-directed</em> motivation running under biased parameters.",
     "hero.lede":"I study why people keep pursuing harmful rewards — in gambling and in alcohol use disorder — by combining computational models of decision-making, field data, and the neuroscience of the brain and body.",
@@ -948,7 +962,8 @@ const I18N = {
     "foot.r":"Université libre de Bruxelles · FNRS"
   },
   fr:{
-    "nav.home":"Accueil","nav.research":"Recherche","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.about":"À propos","nav.contact":"Contact",
+    "nav.home":"Accueil","nav.research":"Recherche","nav.publications":"Publications","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.about":"À propos","nav.contact":"Contact",
+    "pubv.eyebrow":"Publications","pubv.h2":"Sélection et liste complète","pubv.intro":"Une brève sélection de travaux représentatifs, suivie de la liste complète tirée en direct de mon profil ORCID.",
     "hero.eyebrow":"Neurosciences de l'addiction · Psychiatrie computationnelle",
     "hero.thesis":"La compulsion n'est pas une perte de contrôle. C'est une motivation <em>orientée vers un but</em>, opérant sous des paramètres biaisés.",
     "hero.lede":"J'étudie pourquoi certaines personnes continuent de poursuivre des récompenses délétères — dans le jeu d'argent et le trouble de l'usage d'alcool — en combinant modèles computationnels de la décision, données de terrain et neurosciences du corps et du cerveau.",
