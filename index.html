@@ -297,6 +297,7 @@
         <button data-view="notes" data-i18n="nav.notes"></button>
         <button data-view="teaching" data-i18n="nav.mentoring"></button>
         <button data-view="service" data-i18n="nav.service"></button>
+        <button data-view="funding" data-i18n="nav.funding"></button>
         <button data-view="about" data-i18n="nav.about"></button>
         <button data-view="contact" data-i18n="nav.contact"></button>
       </div>
@@ -743,6 +744,19 @@
   </div>
 
   <!-- ABOUT -->
+  <!-- FUNDING -->
+  <div class="view" id="funding">
+    <section class="pad-bottom">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="fund.eyebrow"></p>
+        <h2 data-i18n="fund.h2">Funding, donations, and awards.</h2>
+        <p class="intro" data-i18n="fund.intro"></p>
+      </div>
+      <div id="grants-list" class="grants"></div>
+      <p class="note" data-i18n="fund.note"></p>
+    </section>
+  </div>
+
   <div class="view" id="about">
     <section class="pad-bottom">
       <div class="sec-head">
@@ -774,12 +788,6 @@
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="fund" style="margin-top:70px">
-        <p class="eyebrow" data-i18n="fund.eyebrow"></p>
-        <div id="grants-list" class="grants"></div>
-        <p class="note" data-i18n="fund.note"></p>
       </div>
 
       <div class="beyond">
@@ -825,7 +833,7 @@
 <script>
 const I18N = {
   en:{
-    "nav.home":"Home","nav.research":"Research","nav.publications":"Publications","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.about":"About","nav.contact":"Contact",
+    "nav.home":"Home","nav.research":"Research","nav.publications":"Publications","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.funding":"Funding","nav.about":"About","nav.contact":"Contact",
     "pubv.eyebrow":"Publications","pubv.h2":"Selected and complete list","pubv.intro":"A short selection of representative work, followed by the complete list pulled live from my ORCID record.",
     "pubv.filterLabel":"Filter by year","pubv.allYears":"All years",
     "affil.eyebrow":"Affiliations",
@@ -865,6 +873,8 @@ const I18N = {
     "fig.b1short":"Discrepancy magnitude","fig.b2short":"Discrepancy salience","fig.b3short":"Consumption utility","fig.b4short":"Consumption salience",
     "fig.caption":"Two bias types (content, salience) crossed with two phases of the goal-directed process (detecting a discrepancy, selecting an action) yield four parameters. Compulsion is any of them running under bias, and the distortions compound one another.",
     "fund.eyebrow":"Funding, donations &amp; awards",
+    "fund.h2":"Funding, donations, and awards.",
+    "fund.intro":"A chronological record of research grants, unrestricted gifts, and prizes, kept transparent about their nature and their independence.",
     "fund.catFunding":"Research funding &amp; grants","fund.catDonation":"Donations (unrestricted gifts)","fund.catAward":"Awards &amp; prizes",
     "fund.i1h":"F.R.S.–FNRS","fund.i1w":"Permanent position","fund.i1p":"Research Associate, a protected, teaching-light research track dedicated to research.",
     "fund.i2h":"F.R.S.–FNRS · PDR-WEAVE","fund.i2w":"With Agnès Moors","fund.i2p":"A cross-border collaborative research project (Weave) with Agnès Moors (KU Leuven) on the goal-directed account of compulsion.",
@@ -1008,7 +1018,7 @@ const I18N = {
     "foot.r":"Université libre de Bruxelles · FNRS"
   },
   fr:{
-    "nav.home":"Accueil","nav.research":"Recherche","nav.publications":"Publications","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.about":"À propos","nav.contact":"Contact",
+    "nav.home":"Accueil","nav.research":"Recherche","nav.publications":"Publications","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.funding":"Financements","nav.about":"À propos","nav.contact":"Contact",
     "pubv.eyebrow":"Publications","pubv.h2":"Sélection et liste complète","pubv.intro":"Une brève sélection de travaux représentatifs, suivie de la liste complète tirée en direct de mon profil ORCID.",
     "pubv.filterLabel":"Filtrer par année","pubv.allYears":"Toutes les années",
     "affil.eyebrow":"Affiliations",
@@ -1048,6 +1058,8 @@ const I18N = {
     "fig.b1short":"Magnitude de l'écart","fig.b2short":"Saillance de l'écart","fig.b3short":"Utilité de la consommation","fig.b4short":"Saillance de la consommation",
     "fig.caption":"Deux types de biais (contenu, saillance) croisés avec deux phases du processus orienté vers un but (détecter un écart, sélectionner une action) donnent quatre paramètres. La compulsion, c'est l'un d'eux fonctionnant sous biais, et les déformations s'aggravent les unes les autres.",
     "fund.eyebrow":"Financements, donations &amp; prix",
+    "fund.h2":"Financements, donations et prix.",
+    "fund.intro":"Un relevé chronologique des financements de recherche, des libéralités et des distinctions, transparent sur leur nature et leur indépendance.",
     "fund.catFunding":"Financements de recherche","fund.catDonation":"Donations (libéralités)","fund.catAward":"Prix &amp; distinctions",
     "fund.i1h":"F.R.S.–FNRS","fund.i1w":"Poste permanent","fund.i1p":"Chercheur associé, une position de recherche protégée, à faible charge d'enseignement, dédiée à la recherche.",
     "fund.i2h":"F.R.S.–FNRS · PDR-WEAVE","fund.i2w":"Avec Agnès Moors","fund.i2p":"Un projet de recherche collaboratif transfrontalier (Weave) avec Agnès Moors (KU Leuven), sur la lecture de la compulsion orientée vers un but.",
