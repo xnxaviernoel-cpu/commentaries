@@ -33,8 +33,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F2EEE5;--paper-2:#E9E4D8;--ink:#191A1C;--muted:#6E7176;
+    --paper:#F7F4ED;--paper-2:#EDE9DE;--ink:#191A1C;--muted:#6E7176;
     --line:#E4E2DC;--accent:#345B4A;--accent-soft:rgba(52,91,74,.10);
+    --surface:#FFFFFF;--shadow:0 1px 2px rgba(25,26,28,.03),0 8px 24px rgba(25,26,28,.05);
     --maxw:1080px;--ease:cubic-bezier(.22,.61,.36,1);
   }
   *{box-sizing:border-box;}
@@ -48,7 +49,7 @@
   ::selection{background:var(--accent-soft);}
 
   /* NAV */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(242,238,229,.82);border-bottom:1px solid var(--line);}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(247,244,237,.82);border-bottom:1px solid var(--line);}
   .nav{max-width:var(--maxw);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
   .brand{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:17px;letter-spacing:-.01em;cursor:pointer;background:none;border:0;color:inherit;padding:0;display:flex;align-items:baseline;gap:10px;}
   .brand .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;transform:translateY(-1px);}
@@ -79,7 +80,7 @@
   .hero .meta b{color:var(--ink);font-weight:500;}
 
   /* SIGNATURE PANEL */
-  .panel{margin-top:64px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#fff,var(--paper));overflow:hidden;}
+  .panel{margin-top:64px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden;}
   .panel-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
   .panel-head h3{font-size:17px;margin:0;}
   .panel-head .tag{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;}
@@ -97,7 +98,7 @@
   .sec-head p.intro{font-size:19px;color:var(--ink);margin:20px 0 0;}
 
   /* RESEARCH CHALLENGE */
-  .challenge{margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:linear-gradient(180deg,#fff,var(--paper));padding:26px 30px;}
+  .challenge{margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);padding:26px 30px;}
   .challenge .clabel{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500;}
   .challenge p{font-family:"Newsreader",serif;font-size:clamp(19px,2.3vw,24px);line-height:1.42;margin:12px 0 0;color:var(--ink);max-width:62ch;}
   .challenge .hl{color:var(--accent);font-style:italic;}
@@ -112,8 +113,8 @@
   .line .who{margin-top:12px;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.02em;}
 
   /* CARDS */
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:48px;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-  .card{background:var(--paper);padding:30px 26px;}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:48px;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+  .card{background:var(--surface);padding:30px 26px;}
   .card .kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
   .card h3{font-size:20px;margin:12px 0 8px;}
   .card p{margin:0;color:var(--muted);font-size:16px;}
@@ -154,7 +155,7 @@
   .figure{margin:46px 0 0;}
   .figure svg{display:block;width:100%;max-width:500px;height:auto;margin:0 auto;}
   .fig-legend{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-  .fig-legend .fl{background:var(--paper);padding:18px 20px;}
+  .fig-legend .fl{background:var(--surface);padding:18px 20px;}
   .fig-legend .fl .id{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);font-weight:500;}
   .fig-legend .fl h4{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:15px;margin:7px 0 4px;letter-spacing:-.01em;}
   .fig-legend .fl p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.5;}
@@ -184,7 +185,7 @@
   .grant.award .gy{color:var(--muted);}
 
   /* THESIS FEATURE */
-  .thesis-box{margin-top:56px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:linear-gradient(180deg,#fff,var(--paper));padding:30px 32px;}
+  .thesis-box{margin-top:56px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);padding:30px 32px;}
   .thesis-box .tlabel{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500;}
   .thesis-box h3{font-size:clamp(20px,2.6vw,26px);margin:12px 0 4px;letter-spacing:-.01em;max-width:34ch;}
   .thesis-box .twho{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.02em;margin:0 0 16px;}
@@ -238,8 +239,8 @@
   /* CONTACT */
   .contact-head{font-size:clamp(30px,4.4vw,52px);max-width:17ch;margin-top:14px;}
   .contact-links{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-  .contact-links a{background:var(--paper);padding:24px 26px;text-decoration:none;display:flex;flex-direction:column;gap:6px;transition:background .25s var(--ease);}
-  .contact-links a:hover{background:#fff;}
+  .contact-links a{background:var(--surface);padding:24px 26px;text-decoration:none;display:flex;flex-direction:column;gap:6px;transition:background .25s var(--ease);}
+  .contact-links a:hover{background:var(--accent-soft);}
   .contact-links .k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
   .contact-links .v{font-family:"Space Grotesk",sans-serif;font-size:18px;}
 
