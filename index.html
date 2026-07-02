@@ -118,6 +118,10 @@
   .card .kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
   .card h3{font-size:20px;margin:12px 0 8px;}
   .card p{margin:0;color:var(--muted);font-size:16px;}
+  .card.feature{grid-column:1/-1;background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent);}
+  .card.feature .kicker{color:var(--accent);}
+  .card.feature h3{font-size:22px;}
+  .card.feature p{color:var(--ink);}
 
   /* STACK LISTS */
   .stack{margin-top:48px;border-top:1px solid var(--line);}
@@ -785,8 +789,12 @@
         <div class="cards">
           <div class="card"><div class="kicker" data-i18n="about.hAk"></div><h3 data-i18n="about.hAh"></h3><p data-i18n="about.hAp"></p></div>
           <div class="card"><div class="kicker" data-i18n="about.hBk"></div><h3 data-i18n="about.hBh"></h3><p data-i18n="about.hBp"></p></div>
+          <div class="card"><div class="kicker" data-i18n="about.hCk"></div><h3 data-i18n="about.hCh"></h3><p data-i18n="about.hCp"></p></div>
+          <div class="card"><div class="kicker" data-i18n="about.hDk"></div><h3 data-i18n="about.hDh"></h3><p data-i18n="about.hDp"></p></div>
+          <div class="card"><div class="kicker" data-i18n="about.hEk"></div><h3 data-i18n="about.hEh"></h3><p data-i18n="about.hEp"></p></div>
+          <div class="card"><div class="kicker" data-i18n="about.hFk"></div><h3 data-i18n="about.hFh"></h3><p data-i18n="about.hFp"></p></div>
+          <div class="card feature"><div class="kicker" data-i18n="about.hGk"></div><h3 data-i18n="about.hGh"></h3><p data-i18n="about.hGp"></p></div>
         </div>
-        <p class="note" data-i18n="about.hobNote"></p>
       </div>
     </section>
   </div>
@@ -989,7 +997,11 @@ const I18N = {
     "about.beyondIntro":"The same instinct that drives the research — precision, signal, the pleasure of a well-tuned system — shows up in what I do away from the bench.",
     "about.hAk":"Music","about.hAh":"Music, in high fidelity","about.hAp":"Music first — and the craft of hearing it well. A high-fidelity system assembled and tuned so the recording arrives intact, with the same care for signal and detail I bring to the lab.",
     "about.hBk":"Play","about.hBh":"Gaming","about.hBp":"Story-rich, atmospheric single-player worlds, across PC and PlayStation — narrative RPGs, survival horror, and immersive sims, played for their writing and design as much as their tension.",
-    "about.hobNote":"Add more interests here — tell me what to include and I'll style them to match.",
+    "about.hCk":"Ride","about.hCh":"Motorcycling","about.hCp":"Three very different machines, each with its own character: a Kawasaki ZX-10R, a Suzuki Hayabusa, and a Triumph Rocket 3. Razor-edged sport, high-speed composure, raw torque. The same pleasure of a mechanical system tuned to the road.",
+    "about.hDk":"Go","about.hDh":"Travelling","about.hDp":"Going where the map runs thin. New places for their own sake, and for what they change in how I think once I am back.",
+    "about.hEk":"Taste","about.hEh":"Delicious food","about.hEp":"A serious appetite for food done well, from street stalls to careful kitchens. Flavour as its own kind of precision.",
+    "about.hFk":"Meet","about.hFh":"Intercultural experiences","about.hFp":"Time spent inside other cultures and languages, where habits and assumptions become visible precisely because they are no longer shared.",
+    "about.hGk":"Above all","about.hGh":"Learning","about.hGp":"The thread through all of it. The appetite to understand something new, whatever the domain, is the closest thing I have to a constant.",
     "contact.eyebrow":"Contact","contact.h2":"Open to collaboration, data partnerships, and student inquiries.",
     "contact.k1":"Email","contact.k2":"Affiliation","contact.k3":"ORCID","contact.v3":"Add your ORCID iD","contact.k4":"Google Scholar","contact.v4":"View profile →",
     "contact.note":"Email, ORCID, and Google Scholar are all set.",
@@ -1168,7 +1180,11 @@ const I18N = {
     "about.beyondIntro":"Le même instinct qui guide la recherche — la précision, le signal, le plaisir d'un système bien réglé — se retrouve dans ce qui m'occupe en dehors du laboratoire.",
     "about.hAk":"Musique","about.hAh":"La musique en haute-fidélité","about.hAp":"La musique d'abord — et l'art de bien l'entendre. Un système haute-fidélité assemblé et accordé pour que l'enregistrement parvienne intact, avec le même soin du signal et du détail qu'au laboratoire.",
     "about.hBk":"Jeu","about.hBh":"Jeu vidéo","about.hBp":"Des mondes solo narratifs et atmosphériques, sur PC comme sur PlayStation — RPG narratifs, survival horror et immersive sims, autant pour leur écriture et leur design que pour leur tension.",
-    "about.hobNote":"Ajoute d'autres centres d'intérêt ici — dis-moi lesquels et je les mettrai en forme.",
+    "about.hCk":"Rouler","about.hCh":"Moto","about.hCp":"Trois machines très différentes, chacune avec son caractère : une Kawasaki ZX-10R, une Suzuki Hayabusa et une Triumph Rocket 3. Le tranchant de la sportive, l'aisance à haute vitesse, le couple brut. Le même plaisir d'un système mécanique accordé à la route.",
+    "about.hDk":"Partir","about.hDh":"Voyager","about.hDp":"Aller là où la carte se fait rare. Des lieux nouveaux pour eux-mêmes, et pour ce qu'ils changent dans ma façon de penser une fois rentré.",
+    "about.hEk":"Goûter","about.hEh":"Bien manger","about.hEp":"Un vrai appétit pour la cuisine bien faite, de l'étal de rue à la table exigeante. La saveur comme une forme de précision.",
+    "about.hFk":"Rencontrer","about.hFh":"Expériences interculturelles","about.hFp":"Du temps passé au sein d'autres cultures et d'autres langues, où les habitudes et les évidences deviennent visibles justement parce qu'elles ne sont plus partagées.",
+    "about.hGk":"Avant tout","about.hGh":"Apprendre","about.hGp":"Le fil de tout le reste. L'envie de comprendre quelque chose de nouveau, quel que soit le domaine, est ce que j'ai de plus proche d'une constante.",
     "contact.eyebrow":"Contact","contact.h2":"Ouvert aux collaborations, aux partenariats de données et aux demandes d'étudiant·e·s.",
     "contact.k1":"E-mail","contact.k2":"Affiliation","contact.k3":"ORCID","contact.v3":"Ajoutez votre identifiant ORCID","contact.k4":"Google Scholar","contact.v4":"Voir le profil →",
     "contact.note":"L'e-mail, l'ORCID et Google Scholar sont tous renseignés.",
