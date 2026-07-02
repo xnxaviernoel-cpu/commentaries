@@ -134,6 +134,7 @@
   .pub .pubcat + .pubcat::before{content:"·";margin:0 7px;color:var(--muted);}
   .pub h3{font-size:18.5px;margin:9px 0 6px;font-family:"Space Grotesk",sans-serif;font-weight:500;line-height:1.25;}
   .pub .pubmeta{margin:0;color:var(--muted);font-size:15px;}
+  .pub .pubgloss{margin:8px 0 0;color:var(--ink);font-size:15px;line-height:1.5;font-family:"Newsreader",serif;font-style:italic;max-width:62ch;}
   .pub .doi{display:inline-block;margin-top:10px;font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
   .pub .doi:hover{border-color:var(--accent);}
   .ncog{margin-top:56px;}
@@ -181,6 +182,19 @@
   .grant .ga{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--ink);white-space:nowrap;text-align:right;padding-top:2px;}
   .grant.award .gtt{font-style:normal;}
   .grant.award .gy{color:var(--muted);}
+
+  /* THESIS FEATURE */
+  .thesis-box{margin-top:56px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;background:linear-gradient(180deg,#fff,var(--paper));padding:30px 32px;}
+  .thesis-box .tlabel{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500;}
+  .thesis-box h3{font-size:clamp(20px,2.6vw,26px);margin:12px 0 4px;letter-spacing:-.01em;max-width:34ch;}
+  .thesis-box .twho{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.02em;margin:0 0 16px;}
+  .thesis-box .tsum{color:var(--ink);font-size:16.5px;line-height:1.55;max-width:64ch;margin:0;}
+  .thesis-metrics{display:flex;flex-wrap:wrap;gap:26px;margin:22px 0 2px;}
+  .thesis-metrics .tm{display:flex;flex-direction:column;gap:2px;}
+  .thesis-metrics .tm .tn{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:22px;color:var(--accent);letter-spacing:-.01em;}
+  .thesis-metrics .tm .tl{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .thesis-cta{margin-top:22px;font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;padding:0 0 2px;transition:border-color .2s;}
+  .thesis-cta:hover{border-color:var(--accent);}
 
   /* NEWS */
   .news{margin-top:64px;}
@@ -312,6 +326,20 @@
         <div class="card"><div class="kicker" data-i18n="home.c4k"></div><h3 data-i18n="home.c4h"></h3><p data-i18n="home.c4p"></p></div>
       </div>
 
+      <div class="thesis-box">
+        <p class="tlabel" data-i18n="thesis.label"></p>
+        <h3 data-i18n="thesis.title"></h3>
+        <p class="twho" data-i18n="thesis.who"></p>
+        <p class="tsum" data-i18n="thesis.sum"></p>
+        <div class="thesis-metrics">
+          <div class="tm"><span class="tn">880k</span><span class="tl" data-i18n="thesis.m1"></span></div>
+          <div class="tm"><span class="tn">170M</span><span class="tl" data-i18n="thesis.m2"></span></div>
+          <div class="tm"><span class="tn">11,156</span><span class="tl" data-i18n="thesis.m3"></span></div>
+          <div class="tm"><span class="tn">4</span><span class="tl" data-i18n="thesis.m4"></span></div>
+        </div>
+        <button class="thesis-cta" data-view="research" data-i18n="thesis.cta"></button>
+      </div>
+
       <div class="news">
         <p class="eyebrow" data-i18n="news.eyebrow"></p>
         <div class="news-list">
@@ -339,30 +367,38 @@
 
       <p class="eyebrow" style="margin-top:50px" data-i18n="fig.eyebrow"></p>
       <figure class="figure">
-        <svg viewBox="0 0 680 380" role="img" aria-label="Goal-directed cycle with four biased parameters B1 to B4">
-          <circle cx="340" cy="190" r="130" fill="none" stroke="#345B4A" stroke-width="1.5" stroke-dasharray="4 7" opacity="0.55"/>
-          <path d="M340,52 L340,68 L353,60 Z" fill="#345B4A"/>
-          <path d="M462,190 L478,190 L470,203 Z" fill="#345B4A"/>
-          <path d="M340,312 L340,328 L327,320 Z" fill="#345B4A"/>
-          <path d="M202,190 L218,190 L210,177 Z" fill="#345B4A"/>
+        <svg viewBox="0 0 680 440" role="img" aria-label="Two-by-two architecture of four biased parameters: content versus salience bias crossed with detection versus selection phase">
+          <!-- column axis label (bias type) -->
+          <text x="255" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" data-i18n-text="fig.axContent">CONTENT BIAS</text>
+          <text x="505" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" data-i18n-text="fig.axSalience">SALIENCE BIAS</text>
+          <!-- row axis label (phase), rotated -->
+          <text x="26" y="150" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" transform="rotate(-90 26 150)" data-i18n-text="fig.axDetection">DETECTION</text>
+          <text x="26" y="330" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="500" letter-spacing="1.5" fill="#345B4A" transform="rotate(-90 26 330)" data-i18n-text="fig.axSelection">SELECTION</text>
+
+          <!-- B1 : content x detection (top-left) -->
           <g>
-            <circle cx="432" cy="98" r="36" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
-            <text x="432" y="106" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="21" font-weight="600" fill="#345B4A">B1</text>
+            <rect x="130" y="55" width="250" height="180" rx="12" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
+            <text x="152" y="92" font-family="'JetBrains Mono',monospace" font-size="20" font-weight="600" fill="#345B4A">B1</text>
+            <text x="152" y="132" font-family="'Space Grotesk',sans-serif" font-size="14.5" font-weight="600" fill="#191A1C" data-i18n-text="fig.b1short">Discrepancy magnitude</text>
           </g>
+          <!-- B2 : salience x detection (top-right) -->
           <g>
-            <circle cx="432" cy="282" r="36" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
-            <text x="432" y="290" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="21" font-weight="600" fill="#345B4A">B2</text>
+            <rect x="380" y="55" width="250" height="180" rx="12" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
+            <text x="402" y="92" font-family="'JetBrains Mono',monospace" font-size="20" font-weight="600" fill="#345B4A">B2</text>
+            <text x="402" y="132" font-family="'Space Grotesk',sans-serif" font-size="14.5" font-weight="600" fill="#191A1C" data-i18n-text="fig.b2short">Discrepancy salience</text>
           </g>
+          <!-- B3 : content x selection (bottom-left) -->
           <g>
-            <circle cx="248" cy="282" r="36" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
-            <text x="248" y="290" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="21" font-weight="600" fill="#345B4A">B3</text>
+            <rect x="130" y="235" width="250" height="180" rx="12" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
+            <text x="152" y="272" font-family="'JetBrains Mono',monospace" font-size="20" font-weight="600" fill="#345B4A">B3</text>
+            <text x="152" y="312" font-family="'Space Grotesk',sans-serif" font-size="14.5" font-weight="600" fill="#191A1C" data-i18n-text="fig.b3short">Consumption utility</text>
           </g>
+          <!-- B4 : salience x selection (bottom-right) -->
           <g>
-            <circle cx="248" cy="98" r="36" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
-            <text x="248" y="106" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="21" font-weight="600" fill="#345B4A">B4</text>
+            <rect x="380" y="235" width="250" height="180" rx="12" fill="#ffffff" stroke="#E4E2DC" stroke-width="1.5"/>
+            <text x="402" y="272" font-family="'JetBrains Mono',monospace" font-size="20" font-weight="600" fill="#345B4A">B4</text>
+            <text x="402" y="312" font-family="'Space Grotesk',sans-serif" font-size="14.5" font-weight="600" fill="#191A1C" data-i18n-text="fig.b4short">Consumption salience</text>
           </g>
-          <text x="340" y="184" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="16" font-weight="600" fill="#191A1C" data-i18n-text="fig.c1">Goal-directed</text>
-          <text x="340" y="205" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="16" font-weight="600" fill="#191A1C" data-i18n-text="fig.c2">cycle</text>
         </svg>
         <div class="fig-legend">
           <div class="fl"><div class="id">B1</div><h4 data-i18n="panel.b1h"></h4><p data-i18n="panel.b1p"></p></div>
@@ -435,8 +471,10 @@
         <div class="stack">
           <article class="pub">
             <span class="pubcat" data-i18n="res.cat.letter"></span>
-            <h3>Theory ahead of the data</h3>
-            <p class="pubmeta">Noël X · <em>Addiction</em> · <span data-i18n="res.inpress"></span></p>
+            <h3>Theorizing ahead of the data: a commentary on Piper et al. (2025)</h3>
+            <p class="pubmeta">Noël X · <em>Addiction</em>, 2026</p>
+            <p class="pubgloss" data-i18n="res.letterGloss"></p>
+            <a class="doi" href="https://doi.org/10.1111/add.70541" target="_blank" rel="noopener"><span data-i18n="res.doi"></span></a>
           </article>
           <article class="pub">
             <span class="pubcat" data-i18n="res.cat.modeling"></span>
@@ -460,6 +498,22 @@
             <h3>Behavioural expressions of loss-chasing in gambling: a systematic scoping review</h3>
             <p class="pubmeta">Banerjee N, Chen Z, Clark L, Noël X · <em>Neuroscience &amp; Biobehavioral Reviews</em>, 2023</p>
             <a class="doi" href="https://doi.org/10.1016/j.neubiorev.2023.105377" target="_blank" rel="noopener"><span data-i18n="res.doi"></span></a>
+          </article>
+          <article class="pub">
+            <span class="pubcat" data-i18n="res.cat.gambling"></span>
+            <h3>Effects of winning and losing streaks on within-session chasing in online gambling: a replication and extension study</h3>
+            <p class="pubmeta">Banerjee N, Noël X, Chen Z · <em>International Gambling Studies</em>, 2025</p>
+            <a class="doi" href="https://doi.org/10.1080/14459795.2025.2494598" target="_blank" rel="noopener"><span data-i18n="res.doi"></span></a>
+          </article>
+          <article class="pub">
+            <span class="pubcat" data-i18n="res.cat.gambling"></span>
+            <h3>Examining between-session chasing via time of return in large-scale eCasino data</h3>
+            <p class="pubmeta">Banerjee N, Chen Z, Noël X · <em>Journal of Behavioral Addictions</em> · <span data-i18n="res.underreview"></span></p>
+          </article>
+          <article class="pub">
+            <span class="pubcat" data-i18n="res.cat.gambling"></span>
+            <h3>Between-session chasing via session wager and duration in large-scale eCasino data</h3>
+            <p class="pubmeta">Banerjee N, Chen Z, Noël X · <em>International Gambling Studies</em> · <span data-i18n="res.underreview"></span></p>
           </article>
           <article class="pub">
             <span class="pubcat" data-i18n="res.cat.modeling"></span>
@@ -735,13 +789,23 @@ const I18N = {
     "home.c3k":"Models","home.c3h":"Computational learning","home.c3p":"Reversal and reinforcement-learning models of decision-making in alcohol use disorder.",
     "home.c4k":"Brain &amp; body","home.c4h":"Stimulation, cues, sleep","home.c4p":"Non-invasive stimulation, VR cue exposure, and the link between stress, sleep, and relapse.",
     "news.eyebrow":"Latest",
-    "news.n1d":"2026","news.n1t":"Letter “Theory ahead of the data” accepted at Addiction.",
+    "thesis.label":"Doctoral thesis · completed",
+    "thesis.title":"Understanding the Behavioural Expression of Chasing in Online Gambling",
+    "thesis.who":"Nilosmita Banerjee · supervised by Xavier Noël, co-supervised by Zhang Chen",
+    "thesis.sum":"A thesis-by-publication that recasts loss-chasing and win-chasing as multifaceted behaviours rather than a single act. Across a systematic scoping review and three empirical studies, it shows that gamblers chase differently within versus between sessions, after losses versus wins, and depending on their involvement level and the game they play — offering behavioural markers that could sharpen detection and prevention.",
+    "thesis.m1":"sessions",
+    "thesis.m2":"bets",
+    "thesis.m3":"players",
+    "thesis.m4":"game types",
+    "thesis.cta":"See the resulting papers →",
+    "news.n1d":"2026","news.n1t":"Letter “Theorizing ahead of the data: a commentary on Piper et al.” published in Addiction.",
     "news.n2d":"2026","news.n2t":"Awarded a €580,000 ULB ARC on sleep and addictive behaviour, with Patricia Bonnavion.",
     "news.n3d":"2026","news.n3t":"Discussion leader, Gordon Research Conference on the Neurobiology of Drug Addiction.",
     "news.n4d":"2026","news.n4t":"Joined TRIAGE, a Horizon Europe consortium on AI for early suicide-risk identification, as the Brussels partner.",
     "fig.eyebrow":"The framework, at a glance",
-    "fig.c1":"Goal-directed","fig.c2":"cycle",
-    "fig.caption":"Compulsion is this cycle running under bias — any of the four parameters can distort, and the distortions compound one another.",
+    "fig.axContent":"CONTENT BIAS","fig.axSalience":"SALIENCE BIAS","fig.axDetection":"DETECTION","fig.axSelection":"SELECTION",
+    "fig.b1short":"Discrepancy magnitude","fig.b2short":"Discrepancy salience","fig.b3short":"Consumption utility","fig.b4short":"Consumption salience",
+    "fig.caption":"Two bias types (content, salience) crossed with two phases of the goal-directed process (detecting a discrepancy, selecting an action) yield four parameters. Compulsion is any of them running under bias — and the distortions compound one another.",
     "fund.eyebrow":"Funding, donations &amp; awards",
     "fund.catFunding":"Research funding &amp; grants","fund.catDonation":"Donations (unrestricted gifts)","fund.catAward":"Awards &amp; prizes",
     "fund.i1h":"F.R.S.–FNRS","fund.i1w":"Permanent position","fund.i1p":"Research Associate — a protected, teaching-light research track dedicated to research.",
@@ -770,7 +834,7 @@ const I18N = {
     "ncog.legendPri":"primary contribution","ncog.legendSec":"secondary",
     "ncog.trans":"Three factors cut across the grid: interoception, incentive-motivational sensitization, and metacognitive miscalibration each bias more than one parameter at once. This transversality is why single-mechanism accounts capture only part of the picture.",
     "res.l2label":"Field","res.l2h":"Gambling behavior in real environments",
-    "res.l2p":"Using large-scale, anonymized data from gaming operators, this work characterizes chasing and persistence — within and between sessions — and tests motivational predictions against behavior at scale, rather than in the lab alone.",
+    "res.l2p":"Using large-scale, anonymized data from gaming operators — some 880,000 sessions and 170 million bets from over 11,000 players across dice, slots, blackjack, and roulette — this work characterizes chasing and persistence, within and between sessions, and tests motivational predictions against behavior at scale, rather than in the lab alone.",
     "res.l2who":"Operator-data partnerships · responsible-gambling research",
     "res.l3label":"Models","res.l3h":"Computational modeling of learning",
     "res.l3p":"Reversal-learning and reinforcement-learning models applied to alcohol use disorder, with careful attention to model identifiability, win-stay/lose-shift dynamics, and severity as a continuous predictor of altered learning.",
@@ -807,7 +871,7 @@ const I18N = {
     "res.fullNote":"Automatically compiled from ORCID via OpenAlex, newest first.",
     "res.loading":"Loading publications…",
     "res.fullError":"The live list couldn't load here. See the full, up-to-date record on",
-    "res.cat.gambling":"Gambling · field","res.cat.modeling":"Computational","res.cat.theory":"Theory","res.cat.clinical":"Clinical trial","res.cat.stimulation":"Brain stimulation","res.doi":"View article →","res.cat.letter":"Letter to the Editor","res.inpress":"Accepted · in press",
+    "res.cat.gambling":"Gambling · field","res.cat.modeling":"Computational","res.cat.theory":"Theory","res.cat.clinical":"Clinical trial","res.cat.stimulation":"Brain stimulation","res.doi":"View article →","res.cat.letter":"Letter to the Editor","res.inpress":"Accepted · in press","res.underreview":"Under review","res.letterGloss":"A commentary on Piper et al.'s systematic review of psychedelic-assisted treatment for substance use disorders. Their mapping found 37 studies but only two randomized trials of sufficient quality, against which the theoretical literature has grown strikingly disproportionate: a correlation in an open-label pilot becomes, by the third citation, a mechanism. I argue that the field's reliance on a dual-process framework is theoretically impoverished, and that reading these interventions through goal-directed theory turns the heterogeneity of proposed mechanisms into signal rather than noise. Three correctives follow: mark the evidential basis of theoretical claims, rebalance incentives toward replication and mechanistic testing, and design trials that can identify rather than assume how psychedelics act in addiction.",
     "q.eyebrow":"Open questions","q.h2":"What I don't yet know.",
     "q.intro":"Research is mostly questions. These are the open problems of the goal-directed framework that currently shape where the lab goes next, and the one constraint that sits under all of them.",
     "q.q1":"When alternatives are still valued too low, does widening the choice set (B4) help on its own, or must the value of alternatives (B3) be repaired first?",
@@ -898,13 +962,23 @@ const I18N = {
     "home.c3k":"Modèles","home.c3h":"Apprentissage computationnel","home.c3p":"Modèles d'apprentissage par renversement et par renforcement de la décision dans le trouble de l'usage d'alcool.",
     "home.c4k":"Cerveau &amp; corps","home.c4h":"Stimulation, indices, sommeil","home.c4p":"Stimulation non invasive, exposition aux indices en RV, et lien entre stress, sommeil et rechute.",
     "news.eyebrow":"Actualités",
-    "news.n1d":"2026","news.n1t":"Lettre « Theory ahead of the data » acceptée dans Addiction.",
+    "thesis.label":"Thèse de doctorat · achevée",
+    "thesis.title":"Understanding the Behavioural Expression of Chasing in Online Gambling",
+    "thesis.who":"Nilosmita Banerjee · promoteur Xavier Noël, co-promoteur Zhang Chen",
+    "thesis.sum":"Une thèse sur articles qui reconsidère la poursuite des pertes et des gains comme des comportements à multiples facettes plutôt qu'un acte unique. À travers une revue systématique et trois études empiriques, elle montre que les joueurs poursuivent différemment au sein d'une session et entre les sessions, après des pertes ou des gains, et selon leur niveau d'implication et le jeu pratiqué — offrant des marqueurs comportementaux susceptibles d'affiner la détection et la prévention.",
+    "thesis.m1":"sessions",
+    "thesis.m2":"paris",
+    "thesis.m3":"joueurs",
+    "thesis.m4":"types de jeu",
+    "thesis.cta":"Voir les articles issus de la thèse →",
+    "news.n1d":"2026","news.n1t":"Lettre « Theorizing ahead of the data: a commentary on Piper et al. » publiée dans Addiction.",
     "news.n2d":"2026","news.n2t":"Financement ULB ARC de 580 000 € obtenu, sur le sommeil et les comportements addictifs, avec Patricia Bonnavion.",
     "news.n3d":"2026","news.n3t":"Animateur de discussion, Gordon Research Conference sur la neurobiologie de l'addiction.",
     "news.n4d":"2026","news.n4t":"Rejoint TRIAGE, consortium Horizon Europe sur l'IA pour l'identification précoce du risque suicidaire, comme partenaire bruxellois.",
     "fig.eyebrow":"Le cadre, en un coup d'œil",
-    "fig.c1":"Cycle orienté","fig.c2":"vers un but",
-    "fig.caption":"La compulsion, c'est ce cycle fonctionnant sous biais — chacun des quatre paramètres peut se déformer, et les déformations s'aggravent les unes les autres.",
+    "fig.axContent":"BIAIS DE CONTENU","fig.axSalience":"BIAIS DE SAILLANCE","fig.axDetection":"DÉTECTION","fig.axSelection":"SÉLECTION",
+    "fig.b1short":"Magnitude de l'écart","fig.b2short":"Saillance de l'écart","fig.b3short":"Utilité de la consommation","fig.b4short":"Saillance de la consommation",
+    "fig.caption":"Deux types de biais (contenu, saillance) croisés avec deux phases du processus orienté vers un but (détecter un écart, sélectionner une action) donnent quatre paramètres. La compulsion, c'est l'un d'eux fonctionnant sous biais — et les déformations s'aggravent les unes les autres.",
     "fund.eyebrow":"Financements, donations &amp; prix",
     "fund.catFunding":"Financements de recherche","fund.catDonation":"Donations (libéralités)","fund.catAward":"Prix &amp; distinctions",
     "fund.i1h":"F.R.S.–FNRS","fund.i1w":"Poste permanent","fund.i1p":"Chercheur associé — une position de recherche protégée, à faible charge d'enseignement, dédiée à la recherche.",
@@ -933,7 +1007,7 @@ const I18N = {
     "ncog.legendPri":"contribution primaire","ncog.legendSec":"secondaire",
     "ncog.trans":"Trois facteurs traversent la grille : l'interoception, la sensibilisation incitative-motivationnelle et la miscalibration métacognitive biaisent chacun plus d'un paramètre à la fois. Cette transversalité explique pourquoi les explications à mécanisme unique ne saisissent qu'une partie du tableau.",
     "res.l2label":"Terrain","res.l2h":"Le comportement de jeu en environnement réel",
-    "res.l2p":"À partir de données anonymisées d'opérateurs de jeu à grande échelle, ce travail caractérise la poursuite des pertes et la persistance — au sein des sessions et entre elles — et confronte les prédictions motivationnelles au comportement à grande échelle, au-delà du seul laboratoire.",
+    "res.l2p":"À partir de données anonymisées d'opérateurs de jeu à grande échelle — quelque 880 000 sessions et 170 millions de paris de plus de 11 000 joueurs, aux dés, machines à sous, blackjack et roulette — ce travail caractérise la poursuite des pertes et la persistance, au sein des sessions et entre elles, et confronte les prédictions motivationnelles au comportement à grande échelle, au-delà du seul laboratoire.",
     "res.l2who":"Partenariats de données d'opérateurs · recherche sur le jeu responsable",
     "res.l3label":"Modèles","res.l3h":"Modélisation computationnelle de l'apprentissage",
     "res.l3p":"Modèles d'apprentissage par renversement et par renforcement appliqués au trouble de l'usage d'alcool, avec une attention particulière à l'identifiabilité des modèles, aux dynamiques win-stay/lose-shift, et à la sévérité comme prédicteur continu d'un apprentissage altéré.",
@@ -970,7 +1044,7 @@ const I18N = {
     "res.fullNote":"Compilée automatiquement depuis l'ORCID via OpenAlex, du plus récent au plus ancien.",
     "res.loading":"Chargement des publications…",
     "res.fullError":"La liste en direct n'a pas pu se charger ici. Consultez le relevé complet et à jour sur",
-    "res.cat.gambling":"Jeu · terrain","res.cat.modeling":"Computationnel","res.cat.theory":"Théorie","res.cat.clinical":"Essai clinique","res.cat.stimulation":"Stimulation cérébrale","res.doi":"Voir l'article →","res.cat.letter":"Lettre à l'éditeur","res.inpress":"Acceptée · à paraître",
+    "res.cat.gambling":"Jeu · terrain","res.cat.modeling":"Computationnel","res.cat.theory":"Théorie","res.cat.clinical":"Essai clinique","res.cat.stimulation":"Stimulation cérébrale","res.doi":"Voir l'article →","res.cat.letter":"Lettre à l'éditeur","res.inpress":"Acceptée · à paraître","res.underreview":"En cours d'évaluation","res.letterGloss":"Un commentaire de la revue systématique de Piper et al. sur les traitements assistés par psychédéliques dans les troubles de l'usage de substances. Leur cartographie recense 37 études mais seulement deux essais randomisés de qualité suffisante, face auxquels la littérature théorique a pris une ampleur disproportionnée : une corrélation observée dans un essai ouvert devient, dès la troisième citation, un mécanisme. Je soutiens que le recours du champ au cadre à double processus est théoriquement appauvri, et qu'une lecture de ces interventions par la théorie orientée vers le but transforme l'hétérogénéité des mécanismes proposés en signal plutôt qu'en bruit. Trois correctifs en découlent : signaler la base probante des affirmations théoriques, rééquilibrer les incitations vers la réplication et le test des mécanismes, et concevoir des essais capables d'identifier — plutôt que de présumer — comment les psychédéliques agissent dans l'addiction.",
     "q.eyebrow":"Questions ouvertes","q.h2":"Ce que je ne sais pas encore.",
     "q.intro":"La recherche, c'est surtout des questions. Voici les problèmes ouverts du cadre orienté vers un but qui orientent en ce moment la suite des travaux du laboratoire, et la contrainte qui se tient sous chacun d'eux.",
     "q.q1":"Quand les alternatives restent trop peu valorisées, élargir l'ensemble des choix (B4) suffit-il, ou faut-il d'abord réparer la valeur des alternatives (B3) ?",
