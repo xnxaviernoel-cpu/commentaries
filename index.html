@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F7F4ED;--paper-2:#EDE9DE;--ink:#191A1C;--muted:#6E7176;
+    --paper:#F7F4ED;--paper-2:#EDE9DE;--ink:#191A1C;--muted:#62656A;
     --line:#E4E2DC;--accent:#345B4A;--accent-soft:rgba(52,91,74,.10);
     --surface:#FFFFFF;--shadow:0 1px 2px rgba(25,26,28,.03),0 8px 24px rgba(25,26,28,.05);
     --maxw:1080px;--ease:cubic-bezier(.22,.61,.36,1);
@@ -118,6 +118,12 @@
   .card .kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
   .card h3{font-size:20px;margin:12px 0 8px;}
   .card p{margin:0;color:var(--muted);font-size:16px;}
+  .epigraph{margin:82px auto 0;max-width:62ch;text-align:center;padding-top:34px;border-top:1px solid #e2e0da;}
+  .epigraph .lat{font-style:italic;font-size:clamp(19px,2.2vw,24px);line-height:1.55;color:var(--ink);margin:0;}
+  .epigraph .gloss{margin:16px 0 0;color:var(--muted);font-size:15px;line-height:1.6;}
+  .epigraph .cite{margin:12px 0 0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--accent);}
+  .epi-roots{margin:30px auto 0;max-width:62ch;}
+  .epi-roots p:last-child{margin:8px 0 0;color:var(--muted);font-size:15px;line-height:1.75;}
   .card.feature{grid-column:1/-1;background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent);}
   .card.feature .kicker{color:var(--accent);}
   .card.feature h3{font-size:22px;}
@@ -498,6 +504,17 @@
           <div class="arc-item now"><div class="ay" data-i18n="arc.a5y"></div><h3 data-i18n="arc.a5h"></h3><p data-i18n="arc.a5p"></p></div>
         </div>
         <p class="note" data-i18n="arc.note"></p>
+      </div>
+
+      <div class="epigraph">
+        <p class="lat">&laquo;&#8201;Unaquaeque res, quantum in se est, in suo esse perseverare conatur.&#8201;&raquo;</p>
+        <p class="gloss" data-i18n="epi.gloss"></p>
+        <p class="cite" data-i18n="epi.cite"></p>
+      </div>
+
+      <div class="epi-roots">
+        <p class="eyebrow" data-i18n="roots.eyebrow"></p>
+        <p data-i18n="roots.body"></p>
       </div>
 
     </section>
@@ -934,6 +951,10 @@ const I18N = {
     "arc.a4y":"2016–2023","arc.a4h":"Computation, stress &amp; gambling in the field","arc.a4p":"Formalizing these processes: model-free versus model-based reinforcement learning and its modulation by stress, computational phenotyping, information-seeking, and loss-chasing measured in large-scale online-gambling data (2021–2023).",
     "arc.a5y":"2020 →","arc.a5h":"A goal-directed synthesis","arc.a5p":"Tying two decades of strands together with Agnès Moors and Antoine Bechara into the Constrained Goal-Direction framework: compulsion as goal-directed motivation running under four biased parameters, rather than a loss of control.",
     "arc.note":"Approximate periods, tell me the exact years or milestones you'd like to adjust.",
+    "epi.gloss":"Each thing, as far as it lies in itself, strives to persevere in its being.",
+    "epi.cite":"Spinoza, Ethics III, prop. 6",
+    "roots.eyebrow":"Conceptual roots",
+    "roots.body":"Read this way, the framework is a theory of constrained striving. It inherits Spinoza's refusal of a separate faculty of will: within Agnes Moors's Goal-Directed Theory, what looks like control is not a cold system restraining a hot one, but one valuation outweighing another. Compulsion is not the will losing a fight; it is goal-directed perseverance running under biased parameters.",
     "res.pubEyebrow":"Selected writing",
     "res.p1h":"Compulsions in addiction as biased goal-directed behavior","res.p1w":"Review · 2026","res.p1p":"A 2×2 framework of four biased parameters within Goal-Directed Theory, with Bechara and Moors.",
     "res.p2h":"Between- and within-session chasing in online gambling","res.p2w":"Empirical · operator data","res.p2p":"Field evidence on persistence and loss-chasing drawn from large-scale player records.",
@@ -1120,6 +1141,10 @@ const I18N = {
     "arc.a4y":"2016–2023","arc.a4h":"Computation, stress &amp; jeu de terrain","arc.a4p":"Formaliser ces processus : apprentissage par renforcement sans modèle vs fondé sur un modèle et sa modulation par le stress, phénotypage computationnel, recherche d'information, et poursuite des pertes mesurée dans de larges données de jeu en ligne (2021–2023).",
     "arc.a5y":"2020 →","arc.a5h":"Une synthèse orientée vers un but","arc.a5p":"Relier ces fils de deux décennies, avec Agnès Moors et Antoine Bechara, dans le cadre de la Constrained Goal-Direction : la compulsion comme motivation orientée vers un but opérant sous quatre paramètres biaisés, plutôt qu'une perte de contrôle.",
     "arc.note":"Périodes approximatives, dis-moi les années ou jalons exacts à ajuster.",
+    "epi.gloss":"Chaque chose, autant qu'il est en elle, s'efforce de persévérer dans son être.",
+    "epi.cite":"Spinoza, Éthique III, prop. 6",
+    "roots.eyebrow":"Racines conceptuelles",
+    "roots.body":"Lu ainsi, le cadre est une théorie de l'effort contraint. Il hérite du refus spinoziste d'une faculté séparée de la volonté : dans la Goal-Directed Theory d'Agnes Moors, ce qui ressemble à du contrôle n'est pas un système froid bridant un système chaud, mais une valuation qui l'emporte sur une autre. La compulsion n'est pas la volonté perdant un combat ; c'est la persévérance goal-directed opérant sous paramètres biaisés.",
     "res.pubEyebrow":"Travaux choisis",
     "res.p1h":"Les compulsions dans l'addiction comme comportement orienté vers un but, biaisé","res.p1w":"Revue · 2026","res.p1p":"Un cadre 2×2 de quatre paramètres biaisés au sein de la Goal-Directed Theory, avec Bechara et Moors.",
     "res.p2h":"Poursuite des pertes entre et au sein des sessions dans le jeu en ligne","res.p2w":"Empirique · données d'opérateur","res.p2p":"Données de terrain sur la persistance et la poursuite des pertes, issues de larges historiques de joueurs.",
