@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xavier Noël · Addiction Neuroscience &amp; Computational Psychiatry</title>
-<meta name="description" content="Xavier Noël, Professor &amp; FNRS Research Associate at the Université libre de Bruxelles. Addiction neuroscience, computational psychiatry, and the study of gambling and alcohol use disorder, reframing compulsion as biased goal-directed behaviour.">
+<meta name="description" content="Xavier Noël · Professor &amp; FNRS Research Associate at the Université libre de Bruxelles. Addiction neuroscience, computational psychiatry, and the study of gambling and alcohol use disorder, reframing compulsion as biased goal-directed behaviour.">
 <meta name="author" content="Xavier Noël">
 <meta name="keywords" content="Xavier Noël, addiction neuroscience, computational psychiatry, gambling, alcohol use disorder, goal-directed behaviour, decision-making, ULB, FNRS">
 <meta name="theme-color" content="#F7F4ED">
@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F7F4ED;--paper-2:#EDE9DE;--ink:#191A1C;--muted:#62656A;
+    --paper:#F7F4ED;--paper-2:#EDE9DE;--ink:#191A1C;--muted:#6E7176;
     --line:#E4E2DC;--accent:#345B4A;--accent-soft:rgba(52,91,74,.10);
     --surface:#FFFFFF;--shadow:0 1px 2px rgba(25,26,28,.03),0 8px 24px rgba(25,26,28,.05);
     --maxw:1080px;--ease:cubic-bezier(.22,.61,.36,1);
@@ -118,16 +118,6 @@
   .card .kicker{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
   .card h3{font-size:20px;margin:12px 0 8px;}
   .card p{margin:0;color:var(--muted);font-size:16px;}
-  .epigraph{margin:82px auto 0;max-width:62ch;text-align:center;padding-top:34px;border-top:1px solid #e2e0da;}
-  .epigraph .lat{font-style:italic;font-size:clamp(19px,2.2vw,24px);line-height:1.55;color:var(--ink);margin:0;}
-  .epigraph .gloss{margin:16px 0 0;color:var(--muted);font-size:15px;line-height:1.6;}
-  .epigraph .cite{margin:12px 0 0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--accent);}
-  .epi-roots{margin:30px auto 0;max-width:62ch;}
-  .epi-roots p:last-child{margin:8px 0 0;color:var(--muted);font-size:15px;line-height:1.75;}
-  .card.feature{grid-column:1/-1;background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent);}
-  .card.feature .kicker{color:var(--accent);}
-  .card.feature h3{font-size:22px;}
-  .card.feature p{color:var(--ink);}
 
   /* STACK LISTS */
   .stack{margin-top:48px;border-top:1px solid var(--line);}
@@ -303,7 +293,6 @@
         <button data-view="notes" data-i18n="nav.notes"></button>
         <button data-view="teaching" data-i18n="nav.mentoring"></button>
         <button data-view="service" data-i18n="nav.service"></button>
-        <button data-view="funding" data-i18n="nav.funding"></button>
         <button data-view="about" data-i18n="nav.about"></button>
         <button data-view="contact" data-i18n="nav.contact"></button>
       </div>
@@ -450,7 +439,7 @@
 
       <div class="ncog">
         <p class="eyebrow" data-i18n="ncog.eyebrow"></p>
-        <h2 style="font-size:clamp(24px,3vw,32px);margin:14px 0 0" data-i18n="ncog.h">Nine neurocognitive traditions in addiction, four biases</h2>
+        <h2 style="font-size:clamp(24px,3vw,32px);margin:14px 0 0" data-i18n="ncog.h">Nine traditions, four biases</h2>
         <p class="intro" style="font-size:18px;color:var(--ink);margin:18px 0 0;max-width:66ch" data-i18n="ncog.intro"></p>
         <div class="ncog-list">
           <div class="ncog-row"><div class="ncog-name" data-i18n="ncog.t1"></div><div class="ncog-chips"><span class="chip pri">B4</span><span class="chip sec">B3</span></div></div>
@@ -503,17 +492,7 @@
           <div class="arc-item"><div class="ay" data-i18n="arc.a4y"></div><h3 data-i18n="arc.a4h"></h3><p data-i18n="arc.a4p"></p></div>
           <div class="arc-item now"><div class="ay" data-i18n="arc.a5y"></div><h3 data-i18n="arc.a5h"></h3><p data-i18n="arc.a5p"></p></div>
         </div>
-      </div>
-
-      <div class="epigraph">
-        <p class="lat">&laquo;&#8201;Unaquaeque res, quantum in se est, in suo esse perseverare conatur.&#8201;&raquo;</p>
-        <p class="gloss" data-i18n="epi.gloss"></p>
-        <p class="cite" data-i18n="epi.cite"></p>
-      </div>
-
-      <div class="epi-roots">
-        <p class="eyebrow" data-i18n="roots.eyebrow"></p>
-        <p data-i18n="roots.body"></p>
+        <p class="note" data-i18n="arc.note"></p>
       </div>
 
     </section>
@@ -570,12 +549,12 @@
           <article class="pub">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Examining between-session chasing via time of return in large-scale eCasino data</h3>
-            <p class="pubmeta">Banerjee N, Chen Z, Noël X · <em>Journal of Behavioral Addictions</em> · <span data-i18n="res.inpress"></span></p>
+            <p class="pubmeta">Banerjee N, Noël X, Zhu J, Chen Z · <em>Journal of Behavioral Addictions</em> · <span data-i18n="res.inpress"></span></p>
           </article>
           <article class="pub">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Between-session chasing via session wager and duration in large-scale eCasino data</h3>
-            <p class="pubmeta">Banerjee N, Chen Z, Noël X · <em>International Gambling Studies</em> · <span data-i18n="res.underreview"></span></p>
+            <p class="pubmeta">Banerjee N, Noël X, Chen Z · <em>International Gambling Studies</em> · <span data-i18n="res.underreview"></span></p>
           </article>
           <article class="pub">
             <span class="pubcat" data-i18n="res.cat.modeling"></span>
@@ -686,6 +665,7 @@
         <p class="intro" data-i18n="notes.intro"></p>
       </div>
       <div id="post-list" class="post-list"></div>
+      <p class="note" data-i18n="notes.postsNote"></p>
       <div class="comments">
         <p class="eyebrow" data-i18n="notes.commentsTitle"></p>
         <div id="comments-mount" style="margin-top:20px"></div>
@@ -759,19 +739,6 @@
   </div>
 
   <!-- ABOUT -->
-  <!-- FUNDING -->
-  <div class="view" id="funding">
-    <section class="pad-bottom">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="fund.eyebrow"></p>
-        <h2 data-i18n="fund.h2">Funding, donations, and awards.</h2>
-        <p class="intro" data-i18n="fund.intro"></p>
-      </div>
-      <div id="grants-list" class="grants"></div>
-      <p class="note" data-i18n="fund.note"></p>
-    </section>
-  </div>
-
   <div class="view" id="about">
     <section class="pad-bottom">
       <div class="sec-head">
@@ -805,20 +772,22 @@
         </div>
       </div>
 
+      <div class="fund" style="margin-top:70px">
+        <p class="eyebrow" data-i18n="fund.eyebrow"></p>
+        <div id="grants-list" class="grants"></div>
+        <p class="note" data-i18n="fund.note"></p>
+      </div>
+
       <div class="beyond">
         <p class="eyebrow" data-i18n="about.beyondEyebrow"></p>
         <h2 style="font-size:clamp(24px,3vw,32px);margin:14px 0 0" data-i18n="about.beyondH">Off the clock</h2>
         <p class="intro" style="font-size:18px;color:var(--ink);margin:18px 0 0;max-width:60ch" data-i18n="about.beyondIntro"></p>
+        <p style="font-size:17px;color:var(--ink);margin:16px 0 0;max-width:60ch;line-height:1.55" data-i18n="about.beyondP2"></p>
         <div class="cards">
           <div class="card"><div class="kicker" data-i18n="about.hAk"></div><h3 data-i18n="about.hAh"></h3><p data-i18n="about.hAp"></p></div>
           <div class="card"><div class="kicker" data-i18n="about.hBk"></div><h3 data-i18n="about.hBh"></h3><p data-i18n="about.hBp"></p></div>
-          <div class="card"><div class="kicker" data-i18n="about.hCk"></div><h3 data-i18n="about.hCh"></h3><p data-i18n="about.hCp"></p></div>
-          <div class="card"><div class="kicker" data-i18n="about.hDk"></div><h3 data-i18n="about.hDh"></h3><p data-i18n="about.hDp"></p></div>
-          <div class="card"><div class="kicker" data-i18n="about.hEk"></div><h3 data-i18n="about.hEh"></h3><p data-i18n="about.hEp"></p></div>
-          <div class="card"><div class="kicker" data-i18n="about.hFk"></div><h3 data-i18n="about.hFh"></h3><p data-i18n="about.hFp"></p></div>
-          <div class="card feature"><div class="kicker" data-i18n="about.hGk"></div><h3 data-i18n="about.hGh"></h3><p data-i18n="about.hGp"></p></div>
         </div>
-        <p class="note" style="font-style:italic;margin-top:20px" data-i18n="about.beyondPrivate"></p>
+        <p class="note" data-i18n="about.hobNote"></p>
       </div>
     </section>
   </div>
@@ -849,13 +818,13 @@
 <script>
 const I18N = {
   en:{
-    "nav.home":"Home","nav.research":"Research","nav.publications":"Publications","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.funding":"Funding","nav.about":"About","nav.contact":"Contact",
+    "nav.home":"Home","nav.research":"Research","nav.publications":"Publications","nav.questions":"Open questions","nav.notes":"Notes","nav.mentoring":"Mentoring","nav.service":"Service","nav.about":"About","nav.contact":"Contact",
     "pubv.eyebrow":"Publications","pubv.h2":"Selected and complete list","pubv.intro":"A short selection of representative work, followed by the complete list pulled live from my ORCID record.",
     "pubv.filterLabel":"Filter by year","pubv.allYears":"All years",
     "affil.eyebrow":"Affiliations",
     "hero.eyebrow":"Addiction neuroscience · Computational psychiatry",
     "hero.thesis":"Compulsion is not a loss of control. It is <em>goal-directed</em> motivation running under biased parameters.",
-    "hero.lede":"I study why people keep pursuing harmful rewards, in gambling and in alcohol use disorder, by combining computational models of decision-making, field data, and the neuroscience of the brain and body.",
+    "hero.lede":"I study why people keep pursuing harmful rewards (in gambling and in alcohol use disorder) by combining computational models of decision-making, field data, and the neuroscience of the brain and body.",
     "hero.meta1":"<b>Professor</b> · Université libre de Bruxelles",
     "hero.meta2":"<b>FNRS Research Associate</b> · Psychology &amp; Medicine",
     "hero.meta3":"<b>Based</b> · CHU Brugmann, Brussels",
@@ -889,8 +858,6 @@ const I18N = {
     "fig.b1short":"Discrepancy magnitude","fig.b2short":"Discrepancy salience","fig.b3short":"Consumption utility","fig.b4short":"Consumption salience",
     "fig.caption":"Two bias types (content, salience) crossed with two phases of the goal-directed process (detecting a discrepancy, selecting an action) yield four parameters. Compulsion is any of them running under bias, and the distortions compound one another.",
     "fund.eyebrow":"Funding, donations &amp; awards",
-    "fund.h2":"Funding, donations, and awards.",
-    "fund.intro":"A chronological record of research grants, unrestricted gifts, and prizes, kept transparent about their nature and their independence.",
     "fund.catFunding":"Research funding &amp; grants","fund.catDonation":"Donations (unrestricted gifts)","fund.catAward":"Awards &amp; prizes",
     "fund.i1h":"F.R.S.–FNRS","fund.i1w":"Permanent position","fund.i1p":"Research Associate, a protected, teaching-light research track dedicated to research.",
     "fund.i2h":"F.R.S.–FNRS · PDR-WEAVE","fund.i2w":"With Agnès Moors","fund.i2p":"A cross-border collaborative research project (Weave) with Agnès Moors (KU Leuven) on the goal-directed account of compulsion.",
@@ -898,13 +865,13 @@ const I18N = {
     "fund.i4h":"Gordon Research Conference","fund.i4w":"Invited · 2026","fund.i4p":"Discussion leader for the impulsivity session at the meeting on the Neurobiology of Drug Addiction.",
     "fund.note":"As principal investigator unless noted. Donations are unrestricted gifts (liberalities), independent of any research contract; a separate data-sharing agreement governs data access.",
     "res.eyebrow":"Research","res.h2":"Four lines of inquiry, one question: why does goal pursuit go wrong?",
-    "res.intro":"My program connects a formal theory of motivation to the messy reality of addictive behavior, from operator databases to the clinic, so that explanation and intervention inform each other.",
+    "res.intro":"My program connects a formal theory of motivation to the messy reality of addictive behavior (from operator databases to the clinic) so that explanation and intervention inform each other.",
     "res.challengeLabel":"The grand challenge",
-    "res.challenge":"The hardest problem is <span class=\"hl\">equifinality</span>: very different routes converge on the same compulsive endpoint. And compulsion deepens as a deterioration on three coupled fronts at once, the situations one encounters, the strength of internal goals, and the cognitive factors that bias choice, each one worsening the others.",
+    "res.challenge":"The hardest problem is <span class=\"hl\">equifinality</span>: very different routes converge on the same compulsive endpoint. And compulsion deepens as a deterioration on three coupled fronts at once (the situations one encounters, the strength of internal goals, and the cognitive factors that bias choice) each one worsening the others.",
     "res.l1label":"Theory","res.l1h":"Compulsion as biased goal-directed behavior",
     "res.l1p":"The Constrained Goal-Direction framework treats compulsion not as a failure of control or a runaway habit, but as goal-directed motivation operating under four biased parameters (B1–B4). Its core move is integrative: nine neurocognitive traditions, from incentive sensitization and somatic markers to reinforcement-learning and metacognition, are recast as the sources that bias these four parameters rather than as rival explanations.",
     "res.l1who":"With A. Moors (KU Leuven) · A. Bechara (USC)",
-    "ncog.eyebrow":"The neurocognitive integration","ncog.h":"Nine neurocognitive traditions in addiction, four biases",
+    "ncog.eyebrow":"The neurocognitive integration","ncog.h":"Nine traditions, four biases",
     "ncog.intro":"Nine research traditions have each located the deficit in a different place: outcome valuation, incentive salience, response inhibition, habit, expectancy, and so on. The framework does not choose among them. It reads each as a source that biases one or more of the four cycle parameters, shown here by its primary and secondary loci.",
     "ncog.t1":"Impaired response inhibition & salience attribution (iRISA)",
     "ncog.t2":"Somatic markers & interoception",
@@ -918,7 +885,7 @@ const I18N = {
     "ncog.legendPri":"primary contribution","ncog.legendSec":"secondary",
     "ncog.trans":"Three factors cut across the grid: interoception, incentive-motivational sensitization, and metacognitive miscalibration each bias more than one parameter at once. This transversality is why single-mechanism accounts capture only part of the picture.",
     "res.l2label":"Field","res.l2h":"Gambling behavior in real environments",
-    "res.l2p":"Using large-scale, anonymized data from gaming operators (some 880,000 sessions and 170 million bets from over 11,000 players across dice, slots, blackjack, and roulette), this work characterizes chasing and persistence, within and between sessions, and tests motivational predictions against behavior at scale, rather than in the lab alone.",
+    "res.l2p":"Using large-scale, anonymized data from gaming operators (some 880,000 sessions and 170 million bets from over 11,000 players across dice, slots, blackjack, and roulette) this work characterizes chasing and persistence, within and between sessions, and tests motivational predictions against behavior at scale, rather than in the lab alone.",
     "res.l2who":"Operator-data partnerships · responsible-gambling research",
     "res.l3label":"Models","res.l3h":"Computational modeling of learning",
     "res.l3p":"Reversal-learning and reinforcement-learning models applied to alcohol use disorder, with careful attention to model identifiability, win-stay/lose-shift dynamics, and severity as a continuous predictor of altered learning.",
@@ -927,14 +894,14 @@ const I18N = {
     "res.l4p":"Eye-tracking studies of attentional bias, non-invasive brain stimulation (tDCS) combined with VR cue exposure, and a new four-year program bridging stress, sleep, and addictive behavior, with polysomnography as the methodological backbone.",
     "res.l4who":"CHU Brugmann · ULB Neuroscience Institute · ARC",
     "res.l5label":"Collaboration","res.l5h":"Computational psychiatry beyond addiction",
-    "res.l5p":"As the Brussels partner in TRIAGE (Horizon Europe, coordinated by Armand Chatard, Poitiers), extending theory-informed computational modelling to the early identification of suicide risk, the LifeGuard AI system, and to targeting preventive interventions across a European clinical consortium.",
+    "res.l5p":"As the Brussels partner in TRIAGE (Horizon Europe, coordinated by Armand Chatard, Poitiers), extending theory-informed computational modelling to the early identification of suicide risk (the LifeGuard AI system) and to targeting preventive interventions across a European clinical consortium.",
     "res.l5who":"TRIAGE · Horizon Europe consortium (in preparation)",
     "res.l6label":"Collaboration","res.l6h":"Predicting and preventing dropout from addiction treatment",
     "res.l6p":"With Inga Dziembowska (Provincial Mental Health Hospital, Świecie, Poland), a clinical predictive tool that flags, at admission, patients at high risk of dropping out of residential addiction therapy. Machine-learning models combine demographic, clinical, and behavioural data across a prospective cohort, then feed a mobile application piloted in the ward. The goal-directed framework adds a motivational and interpretive layer to neurocognitive prediction.",
     "res.l6who":"Provincial Mental Health Hospital, Świecie · Polpharma Scientific Foundation · with Haami Yusein",
     "meth.eyebrow":"Methods &amp; techniques","meth.h2":"A hands-on methodological toolkit.",
     "meth.intro":"Across two decades I've worked hands-on with the main tools of human addiction neuroscience, imaging, electrophysiology, eye-tracking, brain stimulation, and computational modelling.",
-    "meth.m1k":"Neuroimaging","meth.m1h":"fMRI","meth.m1p":"Functional MRI of cue reactivity and decision-making.",
+    "meth.m1k":"Neuroimaging","meth.m1h":"fMRI","meth.m1p":"Functional MRI of cue reactivity and decision-making, with Damien Brevers.",
     "meth.m2k":"Electrophysiology","meth.m2h":"EEG / ERP","meth.m2p":"Event-related potentials (P300, error monitoring, cue reactivity), with Salvatore Campanella.",
     "meth.m3k":"Oculometry","meth.m3h":"Eye-tracking","meth.m3p":"Gaze and attentional-bias measurement, ongoing, with Haami Yusein.",
     "meth.m4k":"Perfusion imaging","meth.m4h":"SPECT","meth.m4p":"Single-photon emission tomography of brain perfusion, in earlier studies.",
@@ -942,16 +909,13 @@ const I18N = {
     "meth.c1":"tDCS","meth.c2":"VR cue exposure","meth.c3":"Polysomnography","meth.c4":"Computational modelling (RL)",
     "arc.eyebrow":"The through-line",
     "arc.h2":"Two decades toward one idea.",
-    "arc.intro":"The framework didn't arrive fully formed. It grew out of twenty years of work on the parts, neurocognition, decision-making, personality, attention, computation, that a goal-directed account finally ties together.",
-    "arc.a1y":"2001–2009","arc.a1h":"Neurocognition of alcohol dependence","arc.a1p":"Where it began, under Martial Van der Linden and Paul Verbanck: from the supervisory attentional system (2001) to response inhibition, working memory, and control of proactive interference, mapping the “cool” executive machinery whose failure surfaces as poor decision-making on the Iowa Gambling Task (2005–2009).",
-    "arc.a2y":"2005–2019","arc.a2h":"Decision-making, somatic markers &amp; the triadic model","arc.a2p":"Decision-making under uncertainty with Antoine Bechara, the role of interoceptive and somatic signals, alexithymia and awareness of one's own deficits, converging in the triadic neurocognitive model of addiction: impulsive, reflective, and interoceptive systems (2013). The same somatic-marker lens later reached beyond the clinic, into the emotional and interoceptive underpinnings of political decision-making under uncertainty (Oxford, 2019).",
-    "arc.a3y":"2011–2019","arc.a3h":"Impulsivity, attention &amp; metacognition in gambling","arc.a3p":"Extending the account to gambling disorder: dimensions of impulsivity, implicit associations and the time course of attentional bias and cue reactivity, biased metacognition and post-decision wagering, and the neural signatures of gambling cues (2011–2019).",
-    "arc.a4y":"2016–2023","arc.a4h":"Computation, stress &amp; gambling in the field","arc.a4p":"Formalizing these processes: model-free versus model-based reinforcement learning and its modulation by stress, mental time travel and its pull on intertemporal choice, computational phenotyping, information-seeking, and loss-chasing measured in large-scale online-gambling data (2021–2023).",
+    "arc.intro":"The framework didn't arrive fully formed. It grew out of twenty years of work on the parts (neurocognition, decision-making, personality, attention, computation) that a goal-directed account finally ties together.",
+    "arc.a1y":"2001–2009","arc.a1h":"Neurocognition of alcohol dependence","arc.a1p":"From the supervisory attentional system (2001) to response inhibition, working memory, and control of proactive interference, mapping the “cool” executive machinery whose failure surfaces as poor decision-making on the Iowa Gambling Task (2005–2009).",
+    "arc.a2y":"2005–2013","arc.a2h":"Decision-making, somatic markers &amp; the triadic model","arc.a2p":"Decision-making under uncertainty with Antoine Bechara, the role of interoceptive and somatic signals, and awareness of one's own deficits, converging in the triadic neurocognitive model of addiction: impulsive, reflective, and interoceptive systems (2013).",
+    "arc.a3y":"2011–2019","arc.a3h":"Impulsivity, attention &amp; metacognition in gambling","arc.a3p":"Extending the account to gambling disorder with Damien Brevers: dimensions of impulsivity, the time course of attentional bias and cue reactivity, biased metacognition and post-decision wagering, and the neural signatures of gambling cues (2011–2019).",
+    "arc.a4y":"2016–2023","arc.a4h":"Computation, stress &amp; gambling in the field","arc.a4p":"Formalizing these processes: model-free versus model-based reinforcement learning and its modulation by stress, computational phenotyping, information-seeking, and loss-chasing measured in large-scale online-gambling data (2021–2023).",
     "arc.a5y":"2020 →","arc.a5h":"A goal-directed synthesis","arc.a5p":"Tying two decades of strands together with Agnès Moors and Antoine Bechara into the Constrained Goal-Direction framework: compulsion as goal-directed motivation running under four biased parameters, rather than a loss of control.",
-    "epi.gloss":"Each thing, as far as it lies in itself, strives to persevere in its being.",
-    "epi.cite":"Spinoza, Ethics III, prop. 6",
-    "roots.eyebrow":"Conceptual roots",
-    "roots.body":"Read this way, the framework is a theory of constrained striving. It inherits Spinoza's refusal of a separate faculty of will: within Agnes Moors's Goal-Directed Theory, what looks like control is not a cold system restraining a hot one, but one valuation outweighing another. Compulsion is not the will losing a fight; it is goal-directed perseverance running under biased parameters.",
+    "arc.note":"Approximate periods, tell me the exact years or milestones you'd like to adjust.",
     "res.pubEyebrow":"Selected writing",
     "res.p1h":"Compulsions in addiction as biased goal-directed behavior","res.p1w":"Review · 2026","res.p1p":"A 2×2 framework of four biased parameters within Goal-Directed Theory, with Bechara and Moors.",
     "res.p2h":"Between- and within-session chasing in online gambling","res.p2w":"Empirical · operator data","res.p2p":"Field evidence on persistence and loss-chasing drawn from large-scale player records.",
@@ -984,15 +948,16 @@ const I18N = {
     "q.note":"Q1 and Q2 admit the cleanest empirical test; the cross-cutting question is the precondition for all the rest.",
     "notes.eyebrow":"Notes","notes.h2":"Thinking out loud.",
     "notes.intro":"Short scientific notes, ideas in progress, open to disagreement. Comments are welcome.",
+    "notes.postsNote":"These notes are examples, send me your own and I'll add them, or edit the POSTS list in the file.",
     "notes.commentsTitle":"Join the discussion",
-    "notes.commentsPlaceholder":"Comments aren't open here yet. Until they are, I welcome questions and disagreement by email.",
+    "notes.commentsPlaceholder":"Comments aren't switched on yet. Once the site is hosted, they can be enabled with a free tool (Giscus or Disqus), see the setup notes near the top of the script in the file.",
     "teach.eyebrow":"Mentoring &amp; teaching","teach.h2":"Training the next generation of addiction scientists.",
-    "teach.intro":"I supervise doctoral and master's researchers across the lab's full toolkit, from computational modeling to field data and clinical trials, and teach the goal-directed framework to students and clinical units in Belgium and abroad.",
+    "teach.intro":"I supervise doctoral and master's researchers across the lab's full toolkit (from computational modeling to field data and clinical trials) and teach the goal-directed framework to students and clinical units in Belgium and abroad.",
     "teach.c1k":"Doctoral","teach.c1h":"PhD supervision","teach.c1p":"Six doctoral theses to date, spanning pathological gambling (attentional bias, response inhibition, and decision-making under uncertainty); transcranial direct-current stimulation combined with cue inhibitory-control training to reduce early relapse in alcohol use disorder; event-related-potential markers of inhibitory control and working memory in hazardous drinking; loss-chasing in online gambling characterised from large operator datasets; psilocybin-assisted therapy for severe alcohol use disorder; and computational modelling of reversal learning with eye-tracking of attentional bias.",
     "teach.c2k":"Master's","teach.c2h":"Master's theses &amp; internships","teach.c2p":"Recent topics include psilocybin-assisted therapy and inhibitory control in alcohol use disorder, and reversal learning and action slips.",
     "teach.c3k":"Teaching","teach.c3h":"Lectures &amp; invited courses","teach.c3p":"Guest lectures on the Constrained Goal-Direction framework, including for clinical and research units across European universities.",
     "teach.c4k":"Convening","teach.c4h":"Scientific discussion","teach.c4p":"Discussion leadership at international meetings on the neurobiology of drug addiction, framing impulsivity as a reconfiguration of goal-directed systems.",
-    "teach.note":"Selected topics shown; the full supervision record, more than 50 master's theses since 2008, is available on request.",
+    "teach.note":"Selected topics shown; the full supervision record (more than 50 master's theses since 2008) is available on request.",
     "serv.eyebrow":"Service &amp; expertise","serv.h2":"Reviewing, evaluating, and advising across the field.",
     "serv.intro":"Beyond my own research, I contribute to how the field is funded, published, and held to evidentiary standards, and to keeping applied gambling research independent and methodologically sound.",
     "serv.i1h":"Peer review","serv.i1w":"Multiple journals","serv.i1p":"Regular reviewer for leading addiction and neuroscience journals, including <em>Addiction</em>, <em>Addictive Behaviors</em>, the <em>Journal of Behavioral Addictions</em>, <em>Translational Psychiatry</em>, <em>Alcoholism: Clinical and Experimental Research</em>, <em>Psychological Medicine</em>, and <em>Psychopharmacology</em>, among others.",
@@ -1016,34 +981,30 @@ const I18N = {
     "about.eyebrow":"About",
     "about.p1":"I am a professor and FNRS Research Associate at the Université libre de Bruxelles, with appointments in the Faculties of Psychology and Medicine. My work sits at the intersection of addiction neuroscience, computational psychiatry, and the study of gambling and alcohol use disorder, based at CHU Brugmann within the <a class='doi' href='https://psymed.ulb.be' target='_blank' rel='noopener'>Laboratory of Medical Psychology and Addictology ↗</a> and the ULB Neuroscience Institute.",
     "about.p2":"Over the past years I have developed a goal-directed account of compulsive behavior, the idea that addiction reflects motivation operating under biased parameters rather than a simple loss of control. It is a framework I keep testing against real behavior: operator databases, computational models, eye-tracking, and brain-and-body measures including stimulation and sleep.",
-    "about.p3":"I am a native French speaker working in English, and I care as much about how science is done, its independence, its methods, its openness, as about its conclusions.",
+    "about.p3":"I am a native French speaker working in English, and I care as much about how science is done (its independence, its methods, its openness) as about its conclusions.",
     "about.p4":"I trained as a clinical psychologist and earned my PhD in Psychology at the University of Liège in 2000, under the supervision of Professors Van der Linden and Paul Verbanck. My clinical training spans cognitive behavioural therapy (postgraduate university programme, UCLouvain) and systemic therapy (<a class='doi' href='https://www.iefsh.be' target='_blank' rel='noopener'>Institut d'Études de la Famille et des Systèmes Humains ↗</a>). Formative research stays at the University of Iowa, with Antonio Damasio and Antoine Bechara, and later at the University of Southern California with Bechara, shaped my interest in the somatic-marker tradition and seeded a collaboration that continues today.",
     "about.portraitCap":"Add a portrait: drop a file named portrait.jpg beside this page.",
     "about.glance":"At a glance",
     "about.g1":"<a class='doi' href='https://www.ulb.be' target='_blank' rel='noopener'>Université libre de Bruxelles ↗</a> <span>· ULB</span>","about.g2":"<a class='doi' href='https://www.frs-fnrs.be' target='_blank' rel='noopener'>FNRS ↗</a> <span>· Psychology &amp; Medicine</span>","about.g3":"<a class='doi' href='https://www.chu-brugmann.be' target='_blank' rel='noopener'>CHU Brugmann ↗</a> <span>· Brussels</span>","about.g4":"<a class='doi' href='https://uni.ulb.ac.be' target='_blank' rel='noopener'>ULB Neuroscience Institute ↗</a> <span>· UNI</span>","about.g5":"<a class='doi' href='https://psymed.ulb.be' target='_blank' rel='noopener'>Laboratory of Medical Psychology and Addictology ↗</a> <span>· ULB</span>","about.g6":"<a class='doi' href='https://cvchercheurs.ulb.ac.be/Site/unite/ULB838UK.php' target='_blank' rel='noopener'>Research center for experiMEntAl cliNIcal cogNitive psychopatholoGy (MEANING) ↗</a> <span>· Psychology</span>",
     "about.beyondEyebrow":"Beyond the lab","about.beyondH":"Off the clock",
-    "about.beyondIntro":"The same instinct that drives the research, precision, signal, the pleasure of a well-tuned system, shows up in what I do away from the bench.",
+    "about.beyondIntro":"The same instinct that drives the research (precision, signal, the pleasure of a well-tuned system) shows up in what I do away from the bench.",
+    "about.beyondP2":"Away from the bench, that instinct turns to motorcycling: a Kawasaki ZX-10R, a Suzuki Hayabusa, and a Triumph Rocket 3, three machines each with their own character. It also turns to travel, to good food, and to the intercultural encounters that come with both. Above all, the constant is <em>learning</em>.",
     "about.hAk":"Music","about.hAh":"Music, in high fidelity","about.hAp":"Music first, and the craft of hearing it well. A high-fidelity system assembled and tuned so the recording arrives intact, with the same care for signal and detail I bring to the lab.",
     "about.hBk":"Play","about.hBh":"Gaming","about.hBp":"Story-rich, atmospheric single-player worlds, across PC and PlayStation, narrative RPGs, survival horror, and immersive sims, played for their writing and design as much as their tension.",
-    "about.hCk":"Ride","about.hCh":"Motorcycling","about.hCp":"Three very different machines, each with its own character: a Kawasaki ZX-10R, a Suzuki Hayabusa, and a Triumph Rocket 3. Razor-edged sport, high-speed composure, raw torque. The same pleasure of a mechanical system tuned to the road.",
-    "about.hDk":"Go","about.hDh":"Travelling","about.hDp":"Going where the map runs thin. New places for their own sake, and for what they change in how I think once I am back.",
-    "about.hEk":"Taste","about.hEh":"Delicious food","about.hEp":"A serious appetite for food done well, from street stalls to careful kitchens. Flavour as its own kind of precision.",
-    "about.hFk":"Meet","about.hFh":"Intercultural experiences","about.hFp":"Time spent inside other cultures and languages, where habits and assumptions become visible precisely because they are no longer shared.",
-    "about.hGk":"Above all","about.hGh":"Learning","about.hGp":"The thread through all of it. The appetite to understand something new, whatever the domain, is the closest thing I have to a constant.",
-    "about.beyondPrivate":"And, of course, everything private that is not shared in public.",
+    "about.hobNote":"Add more interests here, tell me what to include and I'll style them to match.",
     "contact.eyebrow":"Contact","contact.h2":"Open to collaboration, data partnerships, and student inquiries.",
     "contact.k1":"Email","contact.k2":"Affiliation","contact.k3":"ORCID","contact.v3":"Add your ORCID iD","contact.k4":"Google Scholar","contact.v4":"View profile →",
     "contact.note":"Email, ORCID, and Google Scholar are all set.",
     "foot.r":"Université libre de Bruxelles · FNRS"
   },
   fr:{
-    "nav.home":"Accueil","nav.research":"Recherche","nav.publications":"Publications","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.funding":"Financements","nav.about":"À propos","nav.contact":"Contact",
+    "nav.home":"Accueil","nav.research":"Recherche","nav.publications":"Publications","nav.questions":"Questions ouvertes","nav.notes":"Réflexions","nav.mentoring":"Encadrement","nav.service":"Expertise","nav.about":"À propos","nav.contact":"Contact",
     "pubv.eyebrow":"Publications","pubv.h2":"Sélection et liste complète","pubv.intro":"Une brève sélection de travaux représentatifs, suivie de la liste complète tirée en direct de mon profil ORCID.",
     "pubv.filterLabel":"Filtrer par année","pubv.allYears":"Toutes les années",
     "affil.eyebrow":"Affiliations",
     "hero.eyebrow":"Neurosciences de l'addiction · Psychiatrie computationnelle",
     "hero.thesis":"La compulsion n'est pas une perte de contrôle. C'est une motivation <em>orientée vers un but</em>, opérant sous des paramètres biaisés.",
-    "hero.lede":"J'étudie pourquoi certaines personnes continuent de poursuivre des récompenses délétères, dans le jeu d'argent et le trouble de l'usage d'alcool, en combinant modèles computationnels de la décision, données de terrain et neurosciences du corps et du cerveau.",
+    "hero.lede":"J'étudie pourquoi certaines personnes continuent de poursuivre des récompenses délétères (dans le jeu d'argent et le trouble de l'usage d'alcool) en combinant modèles computationnels de la décision, données de terrain et neurosciences du corps et du cerveau.",
     "hero.meta1":"<b>Professeur</b> · Université libre de Bruxelles",
     "hero.meta2":"<b>Chercheur associé F.R.S.-FNRS</b> · Psychologie &amp; Médecine",
     "hero.meta3":"<b>Basé</b> · CHU Brugmann, Bruxelles",
@@ -1077,8 +1038,6 @@ const I18N = {
     "fig.b1short":"Magnitude de l'écart","fig.b2short":"Saillance de l'écart","fig.b3short":"Utilité de la consommation","fig.b4short":"Saillance de la consommation",
     "fig.caption":"Deux types de biais (contenu, saillance) croisés avec deux phases du processus orienté vers un but (détecter un écart, sélectionner une action) donnent quatre paramètres. La compulsion, c'est l'un d'eux fonctionnant sous biais, et les déformations s'aggravent les unes les autres.",
     "fund.eyebrow":"Financements, donations &amp; prix",
-    "fund.h2":"Financements, donations et prix.",
-    "fund.intro":"Un relevé chronologique des financements de recherche, des libéralités et des distinctions, transparent sur leur nature et leur indépendance.",
     "fund.catFunding":"Financements de recherche","fund.catDonation":"Donations (libéralités)","fund.catAward":"Prix &amp; distinctions",
     "fund.i1h":"F.R.S.–FNRS","fund.i1w":"Poste permanent","fund.i1p":"Chercheur associé, une position de recherche protégée, à faible charge d'enseignement, dédiée à la recherche.",
     "fund.i2h":"F.R.S.–FNRS · PDR-WEAVE","fund.i2w":"Avec Agnès Moors","fund.i2p":"Un projet de recherche collaboratif transfrontalier (Weave) avec Agnès Moors (KU Leuven), sur la lecture de la compulsion orientée vers un but.",
@@ -1086,13 +1045,13 @@ const I18N = {
     "fund.i4h":"Gordon Research Conference","fund.i4w":"Invité · 2026","fund.i4p":"Animateur de la session sur l'impulsivité, à la conférence sur la neurobiologie de l'addiction.",
     "fund.note":"En tant que promoteur principal sauf mention. Les donations sont des libéralités sans contrepartie, indépendantes de tout contrat de recherche ; l'accès aux données est régi par un accord distinct de partage de données.",
     "res.eyebrow":"Recherche","res.h2":"Quatre axes, une question : pourquoi la poursuite d'un but déraille-t-elle ?",
-    "res.intro":"Mon programme relie une théorie formelle de la motivation à la réalité complexe des comportements addictifs, des bases de données d'opérateurs à la clinique, pour que l'explication et l'intervention se nourrissent l'une l'autre.",
+    "res.intro":"Mon programme relie une théorie formelle de la motivation à la réalité complexe des comportements addictifs (des bases de données d'opérateurs à la clinique) pour que l'explication et l'intervention se nourrissent l'une l'autre.",
     "res.challengeLabel":"Le grand défi",
-    "res.challenge":"Le défi majeur est l'<span class=\"hl\">équifinalité</span> : des trajectoires très différentes convergent vers le même état compulsif. Et la compulsion s'aggrave comme une détérioration sur trois fronts couplés à la fois, les situations rencontrées, la force des buts internes, et les facteurs cognitifs qui biaisent le choix, chacun aggravant les autres.",
+    "res.challenge":"Le défi majeur est l'<span class=\"hl\">équifinalité</span> : des trajectoires très différentes convergent vers le même état compulsif. Et la compulsion s'aggrave comme une détérioration sur trois fronts couplés à la fois (les situations rencontrées, la force des buts internes, et les facteurs cognitifs qui biaisent le choix) chacun aggravant les autres.",
     "res.l1label":"Théorie","res.l1h":"La compulsion comme comportement orienté vers un but, mais biaisé",
     "res.l1p":"Le cadre de la Constrained Goal-Direction conçoit la compulsion non comme une défaillance du contrôle ou une habitude incontrôlée, mais comme une motivation orientée vers un but opérant sous quatre paramètres biaisés (B1–B4). Son geste central est intégratif : neuf traditions neurocognitives, de la sensibilisation incitative aux marqueurs somatiques jusqu'à l'apprentissage par renforcement et la métacognition, y sont relues comme les sources qui biaisent ces quatre paramètres, et non comme des explications rivales.",
     "res.l1who":"Avec A. Moors (KU Leuven) · A. Bechara (USC)",
-    "ncog.eyebrow":"L'intégration neurocognitive","ncog.h":"Neuf traditions neurocognitives dans l'addiction, quatre biais",
+    "ncog.eyebrow":"L'intégration neurocognitive","ncog.h":"Neuf traditions, quatre biais",
     "ncog.intro":"Neuf traditions de recherche ont chacune situé le déficit ailleurs : valuation des résultats, saillance incitative, inhibition de la réponse, habitude, expectation, etc. Le cadre ne tranche pas entre elles. Il lit chacune comme une source qui biaise un ou plusieurs des quatre paramètres du cycle, indiquée ici par ses points de contribution primaire et secondaire.",
     "ncog.t1":"Inhibition de la réponse & attribution de saillance (iRISA)",
     "ncog.t2":"Marqueurs somatiques & interoception",
@@ -1106,7 +1065,7 @@ const I18N = {
     "ncog.legendPri":"contribution primaire","ncog.legendSec":"secondaire",
     "ncog.trans":"Trois facteurs traversent la grille : l'interoception, la sensibilisation incitative-motivationnelle et la miscalibration métacognitive biaisent chacun plus d'un paramètre à la fois. Cette transversalité explique pourquoi les explications à mécanisme unique ne saisissent qu'une partie du tableau.",
     "res.l2label":"Terrain","res.l2h":"Le comportement de jeu en environnement réel",
-    "res.l2p":"À partir de données anonymisées d'opérateurs de jeu à grande échelle (quelque 880 000 sessions et 170 millions de paris de plus de 11 000 joueurs, aux dés, machines à sous, blackjack et roulette), ce travail caractérise la poursuite des pertes et la persistance, au sein des sessions et entre elles, et confronte les prédictions motivationnelles au comportement à grande échelle, au-delà du seul laboratoire.",
+    "res.l2p":"À partir de données anonymisées d'opérateurs de jeu à grande échelle (quelque 880 000 sessions et 170 millions de paris de plus de 11 000 joueurs, aux dés, machines à sous, blackjack et roulette) ce travail caractérise la poursuite des pertes et la persistance, au sein des sessions et entre elles, et confronte les prédictions motivationnelles au comportement à grande échelle, au-delà du seul laboratoire.",
     "res.l2who":"Partenariats de données d'opérateurs · recherche sur le jeu responsable",
     "res.l3label":"Modèles","res.l3h":"Modélisation computationnelle de l'apprentissage",
     "res.l3p":"Modèles d'apprentissage par renversement et par renforcement appliqués au trouble de l'usage d'alcool, avec une attention particulière à l'identifiabilité des modèles, aux dynamiques win-stay/lose-shift, et à la sévérité comme prédicteur continu d'un apprentissage altéré.",
@@ -1115,14 +1074,14 @@ const I18N = {
     "res.l4p":"Études en oculométrie du biais attentionnel, stimulation cérébrale non invasive (tDCS) combinée à l'exposition aux indices en réalité virtuelle, et un nouveau programme de quatre ans reliant stress, sommeil et comportements addictifs, avec la polysomnographie comme socle méthodologique.",
     "res.l4who":"CHU Brugmann · ULB Neuroscience Institute · ARC",
     "res.l5label":"Collaboration","res.l5h":"Psychiatrie computationnelle au-delà de l'addiction",
-    "res.l5p":"Partenaire bruxellois du projet TRIAGE (Horizon Europe, coordonné par Armand Chatard, Poitiers), étendant la modélisation computationnelle guidée par la théorie à l'identification précoce du risque suicidaire, le système LifeGuard AI, et au ciblage d'interventions préventives, au sein d'un consortium clinique européen.",
+    "res.l5p":"Partenaire bruxellois du projet TRIAGE (Horizon Europe, coordonné par Armand Chatard, Poitiers), étendant la modélisation computationnelle guidée par la théorie à l'identification précoce du risque suicidaire (le système LifeGuard AI) et au ciblage d'interventions préventives, au sein d'un consortium clinique européen.",
     "res.l5who":"TRIAGE · consortium Horizon Europe (en préparation)",
     "res.l6label":"Collaboration","res.l6h":"Prédire et prévenir l'abandon du traitement des addictions",
     "res.l6p":"Avec Inga Dziembowska (Hôpital psychiatrique provincial de Świecie, Pologne), un outil clinique prédictif qui repère, dès l'admission, les patients à haut risque d'abandon d'une thérapie résidentielle des addictions. Des modèles d'apprentissage automatique combinent données démographiques, cliniques et comportementales sur une cohorte prospective, puis alimentent une application mobile pilotée dans l'unité. Le cadre orienté vers un but ajoute une couche motivationnelle et interprétative à la prédiction neurocognitive.",
     "res.l6who":"Hôpital psychiatrique provincial de Świecie · Fondation scientifique Polpharma · avec Haami Yusein",
     "meth.eyebrow":"Méthodes &amp; techniques","meth.h2":"Une boîte à outils méthodologique de première main.",
     "meth.intro":"En deux décennies, j'ai manié directement les principaux outils des neurosciences de l'addiction chez l'humain, imagerie, électrophysiologie, oculométrie, stimulation cérébrale et modélisation computationnelle.",
-    "meth.m1k":"Neuro-imagerie","meth.m1h":"IRMf","meth.m1p":"IRM fonctionnelle de la réactivité aux indices et de la décision.",
+    "meth.m1k":"Neuro-imagerie","meth.m1h":"IRMf","meth.m1p":"IRM fonctionnelle de la réactivité aux indices et de la décision, avec Damien Brevers.",
     "meth.m2k":"Électrophysiologie","meth.m2h":"EEG / ERP","meth.m2p":"Potentiels évoqués (P300, monitoring de l'erreur, réactivité aux indices), avec Salvatore Campanella.",
     "meth.m3k":"Oculométrie","meth.m3h":"Eye-tracking","meth.m3p":"Mesure du regard et du biais attentionnel, en cours, avec Haami Yusein.",
     "meth.m4k":"Imagerie de perfusion","meth.m4h":"SPECT","meth.m4p":"Tomographie d'émission monophotonique de la perfusion cérébrale, dans des études plus anciennes.",
@@ -1130,16 +1089,13 @@ const I18N = {
     "meth.c1":"tDCS","meth.c2":"Exposition aux indices en RV","meth.c3":"Polysomnographie","meth.c4":"Modélisation computationnelle (RL)",
     "arc.eyebrow":"Le fil conducteur",
     "arc.h2":"Deux décennies vers une même idée.",
-    "arc.intro":"Le cadre n'est pas apparu tout fait. Il est né de vingt ans de travail sur les pièces, neurocognition, prise de décision, personnalité, attention, computation, qu'une lecture orientée vers un but a fini par relier.",
-    "arc.a1y":"2001–2009","arc.a1h":"Neurocognition de la dépendance à l'alcool","arc.a1p":"Là où tout a commencé, sous la direction de Martial Van der Linden et Paul Verbanck : du système attentionnel superviseur (2001) à l'inhibition de la réponse, la mémoire de travail et le contrôle de l'interférence proactive, cartographier la machinerie exécutive « froide » dont la défaillance se traduit par une décision appauvrie à l'Iowa Gambling Task (2005–2009).",
-    "arc.a2y":"2005–2019","arc.a2h":"Décision, marqueurs somatiques &amp; modèle triadique","arc.a2p":"La prise de décision en incertitude avec Antoine Bechara, le rôle des signaux interoceptifs et somatiques, l'alexithymie et la conscience de ses propres déficits, convergeant vers le modèle neurocognitif triadique de l'addiction : systèmes impulsif, réflexif et interoceptif (2013). Le même prisme des marqueurs somatiques a plus tard débordé la clinique, vers les soubassements émotionnels et interoceptifs de la décision politique en incertitude (Oxford, 2019).",
-    "arc.a3y":"2011–2019","arc.a3h":"Impulsivité, attention &amp; métacognition dans le jeu","arc.a3p":"Extension au trouble du jeu : dimensions de l'impulsivité, associations implicites et décours temporel du biais attentionnel et réactivité aux indices, métacognition biaisée et post-decision wagering, et signatures neurales des indices de jeu (2011–2019).",
-    "arc.a4y":"2016–2023","arc.a4h":"Computation, stress &amp; jeu de terrain","arc.a4p":"Formaliser ces processus : apprentissage par renforcement sans modèle vs fondé sur un modèle et sa modulation par le stress, le voyage mental dans le temps et son influence sur le choix intertemporel, phénotypage computationnel, recherche d'information, et poursuite des pertes mesurée dans de larges données de jeu en ligne (2021–2023).",
+    "arc.intro":"Le cadre n'est pas apparu tout fait. Il est né de vingt ans de travail sur les pièces (neurocognition, prise de décision, personnalité, attention, computation) qu'une lecture orientée vers un but a fini par relier.",
+    "arc.a1y":"2001–2009","arc.a1h":"Neurocognition de la dépendance à l'alcool","arc.a1p":"Du système attentionnel superviseur (2001) à l'inhibition de la réponse, la mémoire de travail et le contrôle de l'interférence proactive, cartographier la machinerie exécutive « froide » dont la défaillance se traduit par une décision appauvrie à l'Iowa Gambling Task (2005–2009).",
+    "arc.a2y":"2005–2013","arc.a2h":"Décision, marqueurs somatiques &amp; modèle triadique","arc.a2p":"La prise de décision en incertitude avec Antoine Bechara, le rôle des signaux interoceptifs et somatiques, et la conscience de ses propres déficits, convergeant vers le modèle neurocognitif triadique de l'addiction : systèmes impulsif, réflexif et interoceptif (2013).",
+    "arc.a3y":"2011–2019","arc.a3h":"Impulsivité, attention &amp; métacognition dans le jeu","arc.a3p":"Extension au trouble du jeu avec Damien Brevers : dimensions de l'impulsivité, décours temporel du biais attentionnel et réactivité aux indices, métacognition biaisée et post-decision wagering, et signatures neurales des indices de jeu (2011–2019).",
+    "arc.a4y":"2016–2023","arc.a4h":"Computation, stress &amp; jeu de terrain","arc.a4p":"Formaliser ces processus : apprentissage par renforcement sans modèle vs fondé sur un modèle et sa modulation par le stress, phénotypage computationnel, recherche d'information, et poursuite des pertes mesurée dans de larges données de jeu en ligne (2021–2023).",
     "arc.a5y":"2020 →","arc.a5h":"Une synthèse orientée vers un but","arc.a5p":"Relier ces fils de deux décennies, avec Agnès Moors et Antoine Bechara, dans le cadre de la Constrained Goal-Direction : la compulsion comme motivation orientée vers un but opérant sous quatre paramètres biaisés, plutôt qu'une perte de contrôle.",
-    "epi.gloss":"Chaque chose, autant qu'il est en elle, s'efforce de persévérer dans son être.",
-    "epi.cite":"Spinoza, Éthique III, prop. 6",
-    "roots.eyebrow":"Racines conceptuelles",
-    "roots.body":"Lu ainsi, le cadre est une théorie de l'effort contraint. Il hérite du refus spinoziste d'une faculté séparée de la volonté : dans la Goal-Directed Theory d'Agnes Moors, ce qui ressemble à du contrôle n'est pas un système froid bridant un système chaud, mais une valuation qui l'emporte sur une autre. La compulsion n'est pas la volonté perdant un combat ; c'est la persévérance goal-directed opérant sous paramètres biaisés.",
+    "arc.note":"Périodes approximatives, dis-moi les années ou jalons exacts à ajuster.",
     "res.pubEyebrow":"Travaux choisis",
     "res.p1h":"Les compulsions dans l'addiction comme comportement orienté vers un but, biaisé","res.p1w":"Revue · 2026","res.p1p":"Un cadre 2×2 de quatre paramètres biaisés au sein de la Goal-Directed Theory, avec Bechara et Moors.",
     "res.p2h":"Poursuite des pertes entre et au sein des sessions dans le jeu en ligne","res.p2w":"Empirique · données d'opérateur","res.p2p":"Données de terrain sur la persistance et la poursuite des pertes, issues de larges historiques de joueurs.",
@@ -1149,7 +1105,7 @@ const I18N = {
     "res.fullNote":"Compilée automatiquement depuis l'ORCID via OpenAlex, du plus récent au plus ancien.",
     "res.loading":"Chargement des publications…",
     "res.fullError":"La liste en direct n'a pas pu se charger ici. Consultez le relevé complet et à jour sur",
-    "res.cat.gambling":"Jeu · terrain","res.cat.modeling":"Computationnel","res.cat.theory":"Théorie","res.cat.clinical":"Essai clinique","res.cat.stimulation":"Stimulation cérébrale","res.doi":"Voir l'article →","res.cat.letter":"Lettre à l'éditeur","res.inpress":"Acceptée · à paraître","res.underreview":"En cours d'évaluation","res.letterGloss":"Un commentaire de la revue systématique de Piper et al. sur les traitements assistés par psychédéliques dans les troubles de l'usage de substances. Leur cartographie recense 37 études mais seulement deux essais randomisés de qualité suffisante, face auxquels la littérature théorique a pris une ampleur disproportionnée : une corrélation observée dans un essai ouvert devient, dès la troisième citation, un mécanisme. Je soutiens que le recours du champ au cadre à double processus est théoriquement appauvri, et qu'une lecture de ces interventions par la théorie orientée vers le but transforme l'hétérogénéité des mécanismes proposés en signal plutôt qu'en bruit. Trois correctifs en découlent : signaler la base probante des affirmations théoriques, rééquilibrer les incitations vers la réplication et le test des mécanismes, et concevoir des essais capables d'identifier, plutôt que de présumer, comment les psychédéliques agissent dans l'addiction.",
+    "res.cat.gambling":"Jeu · terrain","res.cat.modeling":"Computationnel","res.cat.theory":"Théorie","res.cat.clinical":"Essai clinique","res.cat.stimulation":"Stimulation cérébrale","res.doi":"Voir l'article →","res.cat.letter":"Lettre à l'éditeur","res.inpress":"Acceptée · à paraître","res.underreview":"En cours d'évaluation","res.letterGloss":"Un commentaire de la revue systématique de Piper et al. sur les traitements assistés par psychédéliques dans les troubles de l'usage de substances. Leur cartographie recense 37 études mais seulement deux essais randomisés de qualité suffisante, face auxquels la littérature théorique a pris une ampleur disproportionnée : une corrélation observée dans un essai ouvert devient, dès la troisième citation, un mécanisme. Je soutiens que le recours du champ au cadre à double processus est théoriquement appauvri, et qu'une lecture de ces interventions par la théorie orientée vers le but transforme l'hétérogénéité des mécanismes proposés en signal plutôt qu'en bruit. Trois correctifs en découlent : signaler la base probante des affirmations théoriques, rééquilibrer les incitations vers la réplication et le test des mécanismes, et concevoir des essais capables d'identifier (plutôt que de présumer) comment les psychédéliques agissent dans l'addiction.",
     "q.eyebrow":"Questions ouvertes","q.h2":"Ce que je ne sais pas encore.",
     "q.intro":"La recherche, c'est surtout des questions. Voici les problèmes ouverts du cadre orienté vers un but qui orientent en ce moment la suite des travaux du laboratoire, et la contrainte qui se tient sous chacun d'eux.",
     "q.q1":"Quand les alternatives restent trop peu valorisées, élargir l'ensemble des choix (B4) suffit-il, ou faut-il d'abord réparer la valeur des alternatives (B3) ?",
@@ -1172,15 +1128,16 @@ const I18N = {
     "q.note":"Q1 et Q2 admettent le test empirique le plus net ; la question transversale est la condition de possibilité de toutes les autres.",
     "notes.eyebrow":"Réflexions","notes.h2":"Réfléchir à voix haute.",
     "notes.intro":"De courtes notes scientifiques, des idées en cours, ouvertes à la contradiction. Les commentaires sont bienvenus.",
+    "notes.postsNote":"Ces notes sont des exemples, envoie-moi les tiennes et je les ajoute, ou modifie la liste POSTS dans le fichier.",
     "notes.commentsTitle":"Rejoindre la discussion",
-    "notes.commentsPlaceholder":"Les commentaires ne sont pas encore ouverts ici. En attendant, questions et désaccords sont les bienvenus par email.",
+    "notes.commentsPlaceholder":"Les commentaires ne sont pas encore activés. Une fois le site hébergé, ils peuvent l'être via un outil gratuit (Giscus ou Disqus), voir les instructions en haut du script, dans le fichier.",
     "teach.eyebrow":"Encadrement &amp; enseignement","teach.h2":"Former la prochaine génération de chercheurs en addiction.",
-    "teach.intro":"J'encadre des doctorant·e·s et des étudiant·e·s de master sur l'ensemble des outils du laboratoire, de la modélisation computationnelle aux données de terrain et aux essais cliniques, et j'enseigne le cadre orienté vers un but à des étudiant·e·s et des unités cliniques, en Belgique et à l'étranger.",
+    "teach.intro":"J'encadre des doctorant·e·s et des étudiant·e·s de master sur l'ensemble des outils du laboratoire (de la modélisation computationnelle aux données de terrain et aux essais cliniques) et j'enseigne le cadre orienté vers un but à des étudiant·e·s et des unités cliniques, en Belgique et à l'étranger.",
     "teach.c1k":"Doctorat","teach.c1h":"Encadrement doctoral","teach.c1p":"Six thèses de doctorat à ce jour, portant sur le jeu pathologique (biais attentionnel, inhibition de la réponse et prise de décision en incertitude) ; la stimulation transcrânienne à courant continu associée à l'entraînement au contrôle inhibiteur face aux indices pour réduire la rechute précoce dans le trouble de l'usage d'alcool ; les marqueurs en potentiels évoqués du contrôle inhibiteur et de la mémoire de travail chez les buveurs à risque ; la poursuite des pertes dans le jeu en ligne caractérisée à partir de larges jeux de données d'opérateurs ; la thérapie assistée par psilocybine dans le trouble sévère de l'usage d'alcool ; et la modélisation computationnelle de l'apprentissage par renversement avec oculométrie du biais attentionnel.",
     "teach.c2k":"Master","teach.c2h":"Mémoires &amp; stages de master","teach.c2p":"Sujets récents : thérapie assistée par psilocybine et contrôle inhibiteur dans le trouble de l'usage d'alcool ; apprentissage par renversement et erreurs d'action.",
     "teach.c3k":"Enseignement","teach.c3h":"Cours &amp; conférences invitées","teach.c3p":"Conférences sur le cadre de la Constrained Goal-Direction, notamment pour des unités cliniques et de recherche dans plusieurs universités européennes.",
     "teach.c4k":"Animation","teach.c4h":"Discussions scientifiques","teach.c4p":"Animation de discussions lors de rencontres internationales sur la neurobiologie de l'addiction, présentant l'impulsivité comme une reconfiguration des systèmes orientés vers un but.",
-    "teach.note":"Sujets sélectionnés ; l'ensemble de l'encadrement, plus de 50 mémoires de master depuis 2008, est disponible sur demande.",
+    "teach.note":"Sujets sélectionnés ; l'ensemble de l'encadrement (plus de 50 mémoires de master depuis 2008) est disponible sur demande.",
     "serv.eyebrow":"Expertise &amp; service","serv.h2":"Évaluer, expertiser et conseiller, au service du domaine.",
     "serv.intro":"Au-delà de ma propre recherche, je contribue à la façon dont le domaine est financé, publié et tenu à ses standards de preuve, et au maintien d'une recherche appliquée sur le jeu, indépendante et méthodologiquement rigoureuse.",
     "serv.i1h":"Évaluation par les pairs","serv.i1w":"Plusieurs revues","serv.i1p":"Relecteur régulier pour des revues de référence en addiction et neurosciences, dont <em>Addiction</em>, <em>Addictive Behaviors</em>, le <em>Journal of Behavioral Addictions</em>, <em>Translational Psychiatry</em>, <em>Alcoholism: Clinical and Experimental Research</em>, <em>Psychological Medicine</em> et <em>Psychopharmacology</em>, parmi d'autres.",
@@ -1204,21 +1161,17 @@ const I18N = {
     "about.eyebrow":"À propos",
     "about.p1":"Je suis professeur et chercheur associé F.R.S.-FNRS à l'Université libre de Bruxelles, rattaché aux Facultés de Psychologie et de Médecine. Mon travail se situe à l'intersection des neurosciences de l'addiction, de la psychiatrie computationnelle et de l'étude du jeu d'argent et du trouble de l'usage d'alcool, au CHU Brugmann, au sein du <a class='doi' href='https://psymed.ulb.be' target='_blank' rel='noopener'>Laboratoire de Psychologie Médicale et Addictologie ↗</a> et de l'ULB Neuroscience Institute.",
     "about.p2":"Au fil des années, j'ai développé une lecture de la compulsion orientée vers un but, l'idée que l'addiction reflète une motivation opérant sous des paramètres biaisés, plutôt qu'une simple perte de contrôle. C'est un cadre que je confronte sans cesse au comportement réel : bases de données d'opérateurs, modèles computationnels, oculométrie, et mesures du cerveau et du corps, dont la stimulation et le sommeil.",
-    "about.p3":"Francophone de naissance, je travaille en anglais, et j'accorde autant d'importance à la manière dont la science se fait, son indépendance, ses méthodes, son ouverture, qu'à ses conclusions.",
+    "about.p3":"Francophone de naissance, je travaille en anglais, et j'accorde autant d'importance à la manière dont la science se fait (son indépendance, ses méthodes, son ouverture) qu'à ses conclusions.",
     "about.p4":"Formé comme psychologue clinicien, j'ai obtenu mon doctorat en psychologie à l'Université de Liège en 2000, sous la direction des professeurs Van der Linden et Paul Verbanck. Ma formation clinique couvre la thérapie cognitivo-comportementale (troisième cycle universitaire, UCLouvain) et la thérapie systémique (<a class='doi' href='https://www.iefsh.be' target='_blank' rel='noopener'>Institut d'Études de la Famille et des Systèmes Humains ↗</a>). Des séjours de recherche formateurs à l'Université de l'Iowa, auprès d'Antonio Damasio et Antoine Bechara, puis à l'University of Southern California auprès de Bechara, ont façonné mon intérêt pour la tradition des marqueurs somatiques et amorcé une collaboration toujours vivante.",
     "about.portraitCap":"Ajouter un portrait : déposez un fichier portrait.jpg à côté de cette page.",
     "about.glance":"En bref",
     "about.g1":"<a class='doi' href='https://www.ulb.be' target='_blank' rel='noopener'>Université libre de Bruxelles ↗</a> <span>· ULB</span>","about.g2":"<a class='doi' href='https://www.frs-fnrs.be' target='_blank' rel='noopener'>FNRS ↗</a> <span>· Psychologie &amp; Médecine</span>","about.g3":"<a class='doi' href='https://www.chu-brugmann.be' target='_blank' rel='noopener'>CHU Brugmann ↗</a> <span>· Bruxelles</span>","about.g4":"<a class='doi' href='https://uni.ulb.ac.be' target='_blank' rel='noopener'>ULB Neuroscience Institute ↗</a> <span>· UNI</span>","about.g5":"<a class='doi' href='https://psymed.ulb.be' target='_blank' rel='noopener'>Laboratoire de Psychologie Médicale et Addictologie ↗</a> <span>· ULB</span>","about.g6":"<a class='doi' href='https://cvchercheurs.ulb.ac.be/Site/unite/ULB838.php' target='_blank' rel='noopener'>Laboratoire MEANING (psychopathologie clinique, cognitive et expérimentale) ↗</a> <span>· Psychologie</span>",
     "about.beyondEyebrow":"Hors du laboratoire","about.beyondH":"À côté",
-    "about.beyondIntro":"Le même instinct qui guide la recherche, la précision, le signal, le plaisir d'un système bien réglé, se retrouve dans ce qui m'occupe en dehors du laboratoire.",
+    "about.beyondIntro":"Le même instinct qui guide la recherche (la précision, le signal, le plaisir d'un système bien réglé) se retrouve dans ce qui m'occupe en dehors du laboratoire.",
+    "about.beyondP2":"Loin de la paillasse, cet instinct se tourne vers la moto : une Kawasaki ZX-10R, une Suzuki Hayabusa et une Triumph Rocket 3, trois machines au caractère bien distinct. Il se tourne aussi vers les voyages, la bonne cuisine et les rencontres interculturelles qui vont avec. Et par-dessus tout, la constante, c'est <em>apprendre</em>.",
     "about.hAk":"Musique","about.hAh":"La musique en haute-fidélité","about.hAp":"La musique d'abord, et l'art de bien l'entendre. Un système haute-fidélité assemblé et accordé pour que l'enregistrement parvienne intact, avec le même soin du signal et du détail qu'au laboratoire.",
     "about.hBk":"Jeu","about.hBh":"Jeu vidéo","about.hBp":"Des mondes solo narratifs et atmosphériques, sur PC comme sur PlayStation, RPG narratifs, survival horror et immersive sims, autant pour leur écriture et leur design que pour leur tension.",
-    "about.hCk":"Rouler","about.hCh":"Moto","about.hCp":"Trois machines très différentes, chacune avec son caractère : une Kawasaki ZX-10R, une Suzuki Hayabusa et une Triumph Rocket 3. Le tranchant de la sportive, l'aisance à haute vitesse, le couple brut. Le même plaisir d'un système mécanique accordé à la route.",
-    "about.hDk":"Partir","about.hDh":"Voyager","about.hDp":"Aller là où la carte se fait rare. Des lieux nouveaux pour eux-mêmes, et pour ce qu'ils changent dans ma façon de penser une fois rentré.",
-    "about.hEk":"Goûter","about.hEh":"Bien manger","about.hEp":"Un vrai appétit pour la cuisine bien faite, de l'étal de rue à la table exigeante. La saveur comme une forme de précision.",
-    "about.hFk":"Rencontrer","about.hFh":"Expériences interculturelles","about.hFp":"Du temps passé au sein d'autres cultures et d'autres langues, où les habitudes et les évidences deviennent visibles justement parce qu'elles ne sont plus partagées.",
-    "about.hGk":"Avant tout","about.hGh":"Apprendre","about.hGp":"Le fil de tout le reste. L'envie de comprendre quelque chose de nouveau, quel que soit le domaine, est ce que j'ai de plus proche d'une constante.",
-    "about.beyondPrivate":"Et, bien entendu, tout ce qui est privé et ne se partage pas en public.",
+    "about.hobNote":"Ajoute d'autres centres d'intérêt ici, dis-moi lesquels et je les mettrai en forme.",
     "contact.eyebrow":"Contact","contact.h2":"Ouvert aux collaborations, aux partenariats de données et aux demandes d'étudiant·e·s.",
     "contact.k1":"E-mail","contact.k2":"Affiliation","contact.k3":"ORCID","contact.v3":"Ajoutez votre identifiant ORCID","contact.k4":"Google Scholar","contact.v4":"Voir le profil →",
     "contact.note":"L'e-mail, l'ORCID et Google Scholar sont tous renseignés.",
@@ -1284,7 +1237,7 @@ async function loadPublications(){
     const works=(data.results||[]).filter(w=>w&&w.title&&!w.is_paratext&&skip.indexOf(w.type)===-1);
     if(!works.length) throw new Error('empty');
     const byYear={};
-    works.forEach(w=>{const y=w.publication_year||'—';(byYear[y]=byYear[y]||[]).push(w);});
+    works.forEach(w=>{const y=w.publication_year||'n.d.';(byYear[y]=byYear[y]||[]).push(w);});
     const years=Object.keys(byYear).sort((a,b)=>Number(b)-Number(a));
     let html='';
     years.forEach(y=>{
@@ -1351,15 +1304,15 @@ const POSTS=[
     date:"June 2026", dateFr:"Juin 2026",
     title:"Can you study a spiral without pushing someone down it?",
     titleFr:"Peut-on étudier une spirale sans y pousser quelqu'un ?",
-    body:"<p>To watch a goal-directed cycle ignite, you need a real mismatch between where someone is and what they want. But manufacturing that mismatch in the lab, for addiction, brushes against the very harm we study.</p><p>So I keep asking whether naturalistic field data, the moment a player chases a loss, can stand in for the induced discrepancy we are not allowed to create. Maybe the ethical limit is also a scientific clue: if a mechanism only appears under conditions we should not reproduce, the theory has to be testable from traces, not from provocations.</p>",
-    bodyFr:"<p>Pour observer l'amorçage d'un cycle orienté vers un but, il faut un véritable écart entre l'état d'une personne et ce qu'elle désire. Mais fabriquer cet écart en laboratoire, dans l'addiction, frôle le préjudice même que l'on étudie.</p><p>Je me demande donc si les données naturalistes de terrain, l'instant où un joueur poursuit sa perte, peuvent tenir lieu de la discrepancy induite qu'on ne s'autorise pas à créer. Peut-être la limite éthique est-elle aussi un indice scientifique : si un mécanisme n'apparaît que dans des conditions qu'on ne devrait pas reproduire, la théorie doit être testable à partir de traces, et non de provocations.</p>"
+    body:"<p>To watch a goal-directed cycle ignite, you need a real mismatch between where someone is and what they want. But manufacturing that mismatch in the lab, for addiction, brushes against the very harm we study.</p><p>So I keep asking whether naturalistic field data (the moment a player chases a loss) can stand in for the induced discrepancy we are not allowed to create. Maybe the ethical limit is also a scientific clue: if a mechanism only appears under conditions we should not reproduce, the theory has to be testable from traces, not from provocations.</p>",
+    bodyFr:"<p>Pour observer l'amorçage d'un cycle orienté vers un but, il faut un véritable écart entre l'état d'une personne et ce qu'elle désire. Mais fabriquer cet écart en laboratoire, dans l'addiction, frôle le préjudice même que l'on étudie.</p><p>Je me demande donc si les données naturalistes de terrain (l'instant où un joueur poursuit sa perte) peuvent tenir lieu de la discrepancy induite qu'on ne s'autorise pas à créer. Peut-être la limite éthique est-elle aussi un indice scientifique : si un mécanisme n'apparaît que dans des conditions qu'on ne devrait pas reproduire, la théorie doit être testable à partir de traces, et non de provocations.</p>"
   },
   {
     date:"May 2026", dateFr:"Mai 2026",
     title:"Compulsion is a destination, not a road",
     titleFr:"La compulsion est une destination, pas une route",
-    body:"<p>The more I look, the less I believe 'compulsion' names a single mechanism. Different people arrive at the same rigid pursuit from different directions, worsening situations, hardening internal goals, a narrowing of cognition, and the paths keep feeding one another.</p><p>If that is right, the useful question is not 'what is compulsion' but 'which road did this person take', because the road is where an intervention has to meet them.</p>",
-    bodyFr:"<p>Plus je regarde, moins je crois que « compulsion » désigne un mécanisme unique. Des personnes différentes parviennent à la même poursuite rigide par des chemins différents, des situations qui se dégradent, des buts internes qui se durcissent, un rétrécissement cognitif, et ces chemins ne cessent de s'alimenter les uns les autres.</p><p>Si c'est juste, la bonne question n'est pas « qu'est-ce que la compulsion » mais « quelle route cette personne a-t-elle empruntée », car c'est sur cette route qu'une intervention doit venir la rejoindre.</p>"
+    body:"<p>The more I look, the less I believe 'compulsion' names a single mechanism. Different people arrive at the same rigid pursuit from different directions (worsening situations, hardening internal goals, a narrowing of cognition) and the paths keep feeding one another.</p><p>If that is right, the useful question is not 'what is compulsion' but 'which road did this person take', because the road is where an intervention has to meet them.</p>",
+    bodyFr:"<p>Plus je regarde, moins je crois que « compulsion » désigne un mécanisme unique. Des personnes différentes parviennent à la même poursuite rigide par des chemins différents (des situations qui se dégradent, des buts internes qui se durcissent, un rétrécissement cognitif) et ces chemins ne cessent de s'alimenter les uns les autres.</p><p>Si c'est juste, la bonne question n'est pas « qu'est-ce que la compulsion » mais « quelle route cette personne a-t-elle empruntée », car c'est sur cette route qu'une intervention doit venir la rejoindre.</p>"
   }
 ];
 function renderPosts(l){
@@ -1382,7 +1335,7 @@ function renderPosts(l){
      récupère ton "shortname" et mets-le ci-dessous.
    ============================================================ */
 const COMMENTS={
-  provider:"giscus", /* "none" tant que giscus n'est pas finalisé (Discussions activées + app giscus installée sur le dépôt). Remets "giscus" pour réactiver. */
+  provider:"none", /* "none" tant que giscus n'est pas finalisé (Discussions activées + app giscus installée sur le dépôt). Remets "giscus" pour réactiver. */
   giscus:{repo:"xnxaviernoel-cpu/commentaries",repoId:"R_kgDOTKXVdQ",category:"Announcements",categoryId:"DIC_kwDOTKXVdc4DARdg",mapping:"pathname",theme:"light"},
   disqus:{shortname:""}
 };
