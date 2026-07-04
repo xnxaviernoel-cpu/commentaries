@@ -163,6 +163,10 @@
   .pubfilter label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
   .pubfilter select{font-family:"Space Grotesk",sans-serif;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 30px 6px 12px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2712%27%20height%3D%278%27%20viewBox%3D%270%200%2012%208%27%3E%3Cpath%20d%3D%27M1%201l5%205%205-5%27%20stroke%3D%27%23345B4A%27%20stroke-width%3D%271.6%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;transition:border-color .2s;}
   .pubfilter select:hover,.pubfilter select:focus{border-color:var(--accent);outline:none;}
+  .pubcats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px;}
+  .pubcats button{font-family:"Space Grotesk",sans-serif;font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 15px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease);}
+  .pubcats button:hover{border-color:var(--accent);color:var(--ink);}
+  .pubcats button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent);}
   .pubfoot{display:flex;gap:16px;align-items:center;margin-top:10px;}
   .cit{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);}
 
@@ -320,7 +324,7 @@
   <div class="view active" id="home">
     <section class="hero">
       <p class="eyebrow" data-i18n="hero.eyebrow"></p>
-      <h1 class="thesis" data-i18n="hero.thesis">Compulsion is not a loss of control. It is <em>goal-directed</em> motivation running under biased parameters.</h1>
+      <h1 class="thesis" data-i18n="hero.thesis">Compulsion as a set of <em>goal-directed</em> actions running under biased parameters</h1>
       <p class="lede" data-i18n="hero.lede"></p>
       <div class="meta">
         <span data-i18n="hero.meta1"></span>
@@ -531,72 +535,85 @@
 
       <div style="margin-top:54px">
         <p class="eyebrow" data-i18n="res.pubEyebrow"></p>
-        <div class="stack">
-          <article class="pub">
-            <span class="pubcat" data-i18n="res.cat.letter"></span>
+        <div class="pubcats" id="pub-cats"></div>
+        <div class="stack" id="sel-pubs">
+          <article class="pub" data-cats="res.cat.psychedelics">
+            <span class="pubcat" data-i18n="res.cat.psychedelics"></span>
             <h3>Theorizing ahead of the data: a commentary on Piper et al. (2025)</h3>
             <p class="pubmeta">Noël X · <em>Addiction</em>, 2026</p>
             <p class="pubgloss" data-i18n="res.letterGloss"></p>
             <a class="doi" href="https://doi.org/10.1111/add.70541" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Theorizing ahead of the data: a commentary on Piper et al. (2025)"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.theory">
+            <span class="pubcat" data-i18n="res.cat.theory"></span>
+            <h3>Bridging mechanistic heterogeneity and goal-directed regulation in substance use disorders: Commentary on Guerrin et al. (2025)</h3>
+            <p class="pubmeta">Noël X · <em>Neuroscience &amp; Biobehavioral Reviews</em>, 2025</p>
+            <a class="doi" href="https://doi.org/10.1016/j.neubiorev.2025.106394" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Bridging mechanistic heterogeneity and goal-directed regulation in substance use disorders: Commentary on Guerrin et al. (2025)"><span data-i18n="res.doi"></span></a>
+          </article>
+          <article class="pub" data-cats="res.cat.modeling">
             <span class="pubcat" data-i18n="res.cat.modeling"></span>
             <h3>Impact of provoked stress on model-free and model-based reinforcement learning in individuals with alcohol use disorder</h3>
             <p class="pubmeta">Wyckmans F, Chatard A, Kornreich C, Gruson D, Jaafari N, Noël X · <em>Addictive Behaviors Reports</em>, 2024</p>
             <a class="doi" href="https://doi.org/10.1016/j.abrep.2024.100574" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Impact of provoked stress on model-free and model-based reinforcement learning in individuals with alcohol use disorder"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.theory res.cat.aud">
             <span class="pubcat" data-i18n="res.cat.theory"></span>
             <h3>Leveraging memory suppression from a goal-directed perspective to regain control over alcohol consumption</h3>
             <p class="pubmeta">Noël X · <em>Alcohol, Clinical &amp; Experimental Research</em>, 2024</p>
             <a class="doi" href="https://doi.org/10.1111/acer.15462" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Leveraging memory suppression from a goal-directed perspective to regain control over alcohol consumption"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
-            <span class="pubcat" data-i18n="res.cat.clinical"></span>
+          <article class="pub" data-cats="res.cat.aud">
+            <span class="pubcat" data-i18n="res.cat.aud"></span>
+            <h3>Reduced calibration between subjective and objective measures of episodic future thinking in alcohol use disorder</h3>
+            <p class="pubmeta">Noël X, Saeremans M, Kornreich C, Chatard A, Jaafari N, D'Argembeau A · <em>Alcoholism: Clinical &amp; Experimental Research</em>, 2022</p>
+            <a class="doi" href="https://doi.org/10.1111/acer.14763" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Reduced calibration between subjective and objective measures of episodic future thinking in alcohol use disorder"><span data-i18n="res.doi"></span></a>
+          </article>
+          <article class="pub" data-cats="res.cat.psychedelics res.cat.clinical res.cat.aud">
+            <span class="pubcat" data-i18n="res.cat.psychedelics"></span>
             <h3>Psilocybin-assisted therapy for severe alcohol use disorder: protocol for a double-blind, randomized, placebo-controlled phase II trial</h3>
             <p class="pubmeta">Vanderijst L, Hever F, Buot A, … Mallet L, Leys C, Noël X · <em>BMC Psychiatry</em>, 2024</p>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.gambling">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Behavioural expressions of loss-chasing in gambling: a systematic scoping review</h3>
             <p class="pubmeta">Banerjee N, Chen Z, Clark L, Noël X · <em>Neuroscience &amp; Biobehavioral Reviews</em>, 2023</p>
             <a class="doi" href="https://doi.org/10.1016/j.neubiorev.2023.105377" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Behavioural expressions of loss-chasing in gambling: a systematic scoping review"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.gambling">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Effects of winning and losing streaks on within-session chasing in online gambling: a replication and extension study</h3>
             <p class="pubmeta">Banerjee N, Noël X, Chen Z · <em>International Gambling Studies</em>, 2025</p>
             <a class="doi" href="https://doi.org/10.1080/14459795.2025.2494598" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Effects of winning and losing streaks on within-session chasing in online gambling: a replication and extension study"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.gambling">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Examining between-session chasing via time of return in large-scale eCasino data</h3>
             <p class="pubmeta">Banerjee N, Noël X, Zhu J, Chen Z · <em>Journal of Behavioral Addictions</em> · <span data-i18n="res.inpress"></span></p>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.gambling">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Between-session chasing via session wager and duration in large-scale eCasino data</h3>
             <p class="pubmeta">Banerjee N, Noël X, Chen Z · <em>International Gambling Studies</em> · <span data-i18n="res.underreview"></span></p>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.modeling">
             <span class="pubcat" data-i18n="res.cat.modeling"></span>
             <h3>The modulation of acute stress on model-free and model-based reinforcement learning in gambling disorder</h3>
             <p class="pubmeta">Wyckmans F, Banerjee N, Saeremans M, … Bechara A, Buchanan T, Noël X · <em>Journal of Behavioral Addictions</em>, 2022</p>
             <a class="doi" href="https://doi.org/10.1556/2006.2022.00059" target="_blank" rel="noopener" aria-label="Read article on the publisher site: The modulation of acute stress on model-free and model-based reinforcement learning in gambling disorder"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.gambling">
             <span class="pubcat" data-i18n="res.cat.gambling"></span>
             <h3>Winning and losing in online gambling: effects on within-session chasing</h3>
             <p class="pubmeta">Chen Z, Doekemeijer RA, Noël X, Verbruggen F · <em>PLOS ONE</em>, 2022</p>
             <a class="doi" href="https://doi.org/10.1371/journal.pone.0273359" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Winning and losing in online gambling: effects on within-session chasing"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.modeling">
             <span class="pubcat" data-i18n="res.cat.modeling"></span>
             <h3>Distinct motivations to seek out information in healthy individuals and problem gamblers</h3>
             <p class="pubmeta">Cogliati Dezza I, Noël X, Cleeremans A, Yu AJ · <em>Translational Psychiatry</em>, 2021</p>
             <a class="doi" href="https://doi.org/10.1038/s41398-021-01523-3" target="_blank" rel="noopener" aria-label="Read article on the publisher site: Distinct motivations to seek out information in healthy individuals and problem gamblers"><span data-i18n="res.doi"></span></a>
           </article>
-          <article class="pub">
+          <article class="pub" data-cats="res.cat.clinical res.cat.aud">
             <span class="pubcat" data-i18n="res.cat.clinical"></span>
             <span class="pubcat" data-i18n="res.cat.stimulation"></span>
             <h3>Transcranial direct current stimulation combined with alcohol cue inhibitory control training reduces the risk of early alcohol relapse: a randomized placebo-controlled clinical trial</h3>
@@ -856,7 +873,7 @@ const I18N = {
     "pubv.filterLabel":"Filter by year","pubv.allYears":"All years",
     "affil.eyebrow":"Affiliations",
     "hero.eyebrow":"Addiction neuroscience · Computational psychiatry",
-    "hero.thesis":"Compulsion is not a loss of control. It is <em>goal-directed</em> motivation running under biased parameters.",
+    "hero.thesis":"Compulsion as a set of <em>goal-directed</em> actions running under biased parameters",
     "hero.lede":"I study why people keep pursuing harmful rewards, in gambling and in alcohol use disorder, by combining computational models of decision-making, field data, and the neuroscience of the brain and body.",
     "hero.meta1":"<b>Professor</b> · Université libre de Bruxelles",
     "hero.meta2":"<b>FNRS Research Associate</b> · Psychology &amp; Medicine",
@@ -964,7 +981,7 @@ const I18N = {
     "res.fullNote":"Automatically compiled from ORCID via OpenAlex, newest first.",
     "res.loading":"Loading publications…",
     "res.fullError":"The live list couldn't load here. See the full, up-to-date record on",
-    "res.cat.gambling":"Gambling · field","res.cat.modeling":"Computational","res.cat.theory":"Theory","res.cat.clinical":"Clinical trial","res.cat.stimulation":"Brain stimulation","res.doi":"View article →","res.cat.letter":"Letter to the Editor","res.inpress":"Accepted · in press","res.underreview":"Under review","res.letterGloss":"A commentary on Piper et al.'s systematic review of psychedelic-assisted treatment for substance use disorders. Their mapping found 37 studies but only two randomized trials of sufficient quality, against which the theoretical literature has grown strikingly disproportionate: a correlation in an open-label pilot becomes, by the third citation, a mechanism. I argue that the field's reliance on a dual-process framework is theoretically impoverished, and that reading these interventions through goal-directed theory turns the heterogeneity of proposed mechanisms into signal rather than noise. Three correctives follow: mark the evidential basis of theoretical claims, rebalance incentives toward replication and mechanistic testing, and design trials that can identify rather than assume how psychedelics act in addiction.",
+    "res.catAll":"All","res.cat.gambling":"Gambling","res.cat.psychedelics":"Psychedelics","res.cat.aud":"Alcohol-use disorder","res.cat.modeling":"Computational","res.cat.theory":"Theory","res.cat.clinical":"Clinical trial","res.cat.stimulation":"Brain stimulation","res.doi":"View article →","res.cat.letter":"Letter to the Editor","res.inpress":"Accepted · in press","res.underreview":"Under review","res.letterGloss":"A commentary on Piper et al.'s systematic review of psychedelic-assisted treatment for substance use disorders. Their mapping found 37 studies but only two randomized trials of sufficient quality, against which the theoretical literature has grown strikingly disproportionate: a correlation in an open-label pilot becomes, by the third citation, a mechanism. I argue that the field's reliance on a dual-process framework is theoretically impoverished, and that reading these interventions through goal-directed theory turns the heterogeneity of proposed mechanisms into signal rather than noise. Three correctives follow: mark the evidential basis of theoretical claims, rebalance incentives toward replication and mechanistic testing, and design trials that can identify rather than assume how psychedelics act in addiction.",
     "q.eyebrow":"Open questions","q.h2":"What I don't yet know.",
     "q.intro":"Research is mostly questions. These are the open problems of the goal-directed framework that currently shape where the lab goes next, and the one constraint that sits under all of them.",
     "q.q1":"When alternatives are still valued too low, does widening the choice set (B4) help on its own, or must the value of alternatives (B3) be repaired first?",
@@ -1046,7 +1063,7 @@ const I18N = {
     "pubv.filterLabel":"Filtrer par année","pubv.allYears":"Toutes les années",
     "affil.eyebrow":"Affiliations",
     "hero.eyebrow":"Neurosciences de l'addiction · Psychiatrie computationnelle",
-    "hero.thesis":"La compulsion n'est pas une perte de contrôle. C'est une motivation <em>orientée vers un but</em>, opérant sous des paramètres biaisés.",
+    "hero.thesis":"La compulsion comme un ensemble d'actions <em>orientées vers un but</em>, opérant sous des paramètres biaisés",
     "hero.lede":"J'étudie pourquoi certaines personnes continuent de poursuivre des récompenses délétères, dans le jeu d'argent et le trouble de l'usage d'alcool, en combinant modèles computationnels de la décision, données de terrain et neurosciences du corps et du cerveau.",
     "hero.meta1":"<b>Professeur</b> · Université libre de Bruxelles",
     "hero.meta2":"<b>Chercheur associé F.R.S.-FNRS</b> · Psychologie &amp; Médecine",
@@ -1154,7 +1171,7 @@ const I18N = {
     "res.fullNote":"Compilée automatiquement depuis l'ORCID via OpenAlex, du plus récent au plus ancien.",
     "res.loading":"Chargement des publications…",
     "res.fullError":"La liste en direct n'a pas pu se charger ici. Consultez le relevé complet et à jour sur",
-    "res.cat.gambling":"Jeu · terrain","res.cat.modeling":"Computationnel","res.cat.theory":"Théorie","res.cat.clinical":"Essai clinique","res.cat.stimulation":"Stimulation cérébrale","res.doi":"Voir l'article →","res.cat.letter":"Lettre à l'éditeur","res.inpress":"Acceptée · à paraître","res.underreview":"En cours d'évaluation","res.letterGloss":"Un commentaire de la revue systématique de Piper et al. sur les traitements assistés par psychédéliques dans les troubles de l'usage de substances. Leur cartographie recense 37 études mais seulement deux essais randomisés de qualité suffisante, face auxquels la littérature théorique a pris une ampleur disproportionnée : une corrélation observée dans un essai ouvert devient, dès la troisième citation, un mécanisme. Je soutiens que le recours du champ au cadre à double processus est théoriquement appauvri, et qu'une lecture de ces interventions par la théorie orientée vers le but transforme l'hétérogénéité des mécanismes proposés en signal plutôt qu'en bruit. Trois correctifs en découlent : signaler la base probante des affirmations théoriques, rééquilibrer les incitations vers la réplication et le test des mécanismes, et concevoir des essais capables d'identifier, plutôt que de présumer, comment les psychédéliques agissent dans l'addiction.",
+    "res.catAll":"Toutes","res.cat.gambling":"Jeux d'argent","res.cat.psychedelics":"Psychédéliques","res.cat.aud":"Trouble de l'usage d'alcool","res.cat.modeling":"Computationnel","res.cat.theory":"Théorie","res.cat.clinical":"Essai clinique","res.cat.stimulation":"Stimulation cérébrale","res.doi":"Voir l'article →","res.cat.letter":"Lettre à l'éditeur","res.inpress":"Acceptée · à paraître","res.underreview":"En cours d'évaluation","res.letterGloss":"Un commentaire de la revue systématique de Piper et al. sur les traitements assistés par psychédéliques dans les troubles de l'usage de substances. Leur cartographie recense 37 études mais seulement deux essais randomisés de qualité suffisante, face auxquels la littérature théorique a pris une ampleur disproportionnée : une corrélation observée dans un essai ouvert devient, dès la troisième citation, un mécanisme. Je soutiens que le recours du champ au cadre à double processus est théoriquement appauvri, et qu'une lecture de ces interventions par la théorie orientée vers le but transforme l'hétérogénéité des mécanismes proposés en signal plutôt qu'en bruit. Trois correctifs en découlent : signaler la base probante des affirmations théoriques, rééquilibrer les incitations vers la réplication et le test des mécanismes, et concevoir des essais capables d'identifier, plutôt que de présumer, comment les psychédéliques agissent dans l'addiction.",
     "q.eyebrow":"Questions ouvertes","q.h2":"Ce que je ne sais pas encore.",
     "q.intro":"La recherche, c'est surtout des questions. Voici les problèmes ouverts du cadre orienté vers un but qui orientent en ce moment la suite des travaux du laboratoire, et la contrainte qui se tient sous chacun d'eux.",
     "q.q1":"Quand les alternatives restent trop peu valorisées, élargir l'ensemble des choix (B4) suffit-il, ou faut-il d'abord réparer la valeur des alternatives (B3) ?",
@@ -1233,6 +1250,41 @@ const I18N = {
 };
 
 let lang = 'en';
+function initPubCats(){
+  var host=document.getElementById('pub-cats');
+  var list=document.getElementById('sel-pubs');
+  if(!host||!list) return;
+  var arts=[].slice.call(list.querySelectorAll('article.pub'));
+  function catsOf(a){
+    var d=a.getAttribute('data-cats');
+    if(d) return d.split(/\s+/).filter(Boolean);
+    var s=a.querySelector('.pubcat');
+    return s&&s.getAttribute('data-i18n')?[s.getAttribute('data-i18n')]:[];
+  }
+  var present={};
+  arts.forEach(function(a){catsOf(a).forEach(function(k){present[k]=1;});});
+  var PREF=['res.cat.modeling','res.cat.theory','res.cat.clinical','res.cat.aud','res.cat.gambling','res.cat.psychedelics'];
+  var order=[];
+  PREF.forEach(function(k){if(present[k]){order.push(k);delete present[k];}});
+  Object.keys(present).forEach(function(k){order.push(k);});
+  function label(k){return (I18N[lang]&&I18N[lang][k])||k;}
+  function mkBtn(key,i18nkey){
+    var b=document.createElement('button');
+    b.type='button';
+    b.textContent=label(i18nkey);
+    b.setAttribute('data-i18n-text',i18nkey);
+    b.setAttribute('aria-pressed',key==='all'?'true':'false');
+    b.addEventListener('click',function(){
+      host.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      arts.forEach(function(a){a.style.display=(key==='all'||catsOf(a).indexOf(key)>-1)?'':'none';});
+    });
+    return b;
+  }
+  host.innerHTML='';
+  host.appendChild(mkBtn('all','res.catAll'));
+  order.forEach(function(k){host.appendChild(mkBtn(k,k));});
+}
 function applyLang(l){
   lang = l;
   document.documentElement.lang = l;
@@ -1456,6 +1508,7 @@ function renderGrants(l){
   el.innerHTML=html;
 }
 
+initPubCats();
 applyLang('en');
 </script>
 </body>
